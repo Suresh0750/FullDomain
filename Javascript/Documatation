@@ -151,7 +151,7 @@ pure function, impure function :
 
 // # Generator function
 
-A generator function in JavaScript is a special type of function that can pause its execution and later resume from where it paused. These functions are defined using the function* syntax and use the yield keyword to pause execution.
+    A generator function in JavaScript is a special type of function that can pause its execution and later resume from where it paused. These functions are defined using the function* syntax and use the yield keyword to pause execution.
 
 // # factory function
 
@@ -185,4 +185,31 @@ A generator function in JavaScript is a special type of function that can pause 
 
 // # AJAX
 
-Ajax (Asynchronous JavaScript and XML) is a set of web development techniques that allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page without reloading the whole page.
+    Ajax (Asynchronous JavaScript and XML) is a set of web development techniques that allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page without reloading the whole page.
+
+// # callback hell
+
+    Callback hell, also known as the "pyramid of doom," refers to the situation where multiple nested callbacks make the code difficult to read and maintain. This often happens in asynchronous programming when you have to perform several operations in sequence, each depending on the completion of the previous one.
+
+// # promise
+
+    A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner, more manageable way to handle asynchronous operations compared to traditional callback-based approaches.
+
+    promise state:
+        pending,fullfiled,rejection
+
+// # promise.allSettled 
+
+    A promise.allSettled if the promise either failure or succese it will show the result with status code
+
+// # promise.all
+
+    If all promise succese means it succese if any one of the promise failure means if it fails.
+
+// # promise.any
+    
+    If will give resulte which is resolve.
+
+// async and await 
+
+    Async/await provides a powerful way to write asynchronous code in a more synchronous fashion, improving readability, error handling, and overall code structure. It helps avoid callback hell and makes managing multiple asynchronous operations more straightforward.

@@ -207,3 +207,57 @@ let student1 = Object.assign({},obj,collage)   // * { name: 'sunnampu', age: 21,
     console.log('1234'-0)  //* result is number   // * it happens implicity by Javascript
 
 // # Ajax (Asynchronus Javascript XHML)
+
+    function loadData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'data.txt', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('content').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+
+// # Callback Hell
+    
+
+
+
+function firstTask(callback){
+    setTimeout(()=>{
+        console.log('First Task')
+    },3000)
+    callback()
+}
+
+
+function secondTask(callback){
+    setTimeout(()=>{
+        console.log('second Task')
+    },3000)
+      callback()
+}
+
+function thirdTask(){
+    setTimeout(()=>{
+        console.log(`Third Task`)
+    },3000)
+}
+
+
+firstTask(function(){
+    secondTask(function(){
+        thirdTask()
+    })
+})  /// * call back hell
+
+
+// async and await 
+
+
+async function checkAsync(){
+    setTimeout(()=>{
+        console.log('helow all')
+    },3000)
+}
