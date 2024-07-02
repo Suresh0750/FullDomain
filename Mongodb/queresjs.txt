@@ -1,0 +1,7 @@
+CRUD Method Database:
+
+Create :
+    use Database;
+Read :
+    show Databese;
+

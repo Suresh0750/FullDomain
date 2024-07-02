@@ -1,0 +1,188 @@
+
+How do you  detect primitive or non primitive value types in javascript?
+
+
+1) Number : Represents numeric values
+2) String : Represents textual data.
+3) Boolean : Represents true or false.
+4) Undefined : Represents an uninitialized variable or absence of a value.
+5) Null : Represents the intentional absence of any object value.
+6) Symbol : Represents a unique identifier.
+7) BigInt : Represent a number with arbitrary precision.
+
+Non-primitive values are objects, which include arrays, fruntions, and custom objects.
+
+
+how many data type is js ?  (9)
+primitive data type: 
+ Number, string, Boolean, Undefined,Null, BigInt,and Symbol
+
+Non primitive data type: (2 non primitve data types)
+object, arrays, functions
+
+8) object : Represent a collection of key and value pairs.
+9) Function : subtype of the object value that can be called funtions.
+
+
+what is identifier?
+
+ Identifier is a name of the variable. 
+ ex : let x = 10 // here x is the identifier
+
+what is variable ?
+  
+  The actual storage location identified by the identifier. ex: let, var , const
+
+scope : 
+
+   block scop : let and const is block scop.
+   var : function scope or global scopt.
+
+JS key features :
+    
+    > Arrow function,
+    > Destructre,
+    > templeate literals,
+    > promise,
+    > Enhanced Object literals.  // example: if the object inside prperty we don't want to assign key with value has same value means :
+                    let name = 'value'
+                    let obj = {
+                        name,
+                        [age]   // we use [] this for mention the dynamic value 
+                    }
+
+Arrow fuctions : 
+    Arrow functions are concise to write a anonymous functions expression in javascript. They were indroduce in ECMAScript 6 and are especially useful for short, single-expression function.
+
+
+global execution contaxt
+
+    The global execution context is the default is the default or base execution context in Javascript. It is created when your Javascript code starts to run, and it governs the environment in which the code executes.
+
+    while hoisting time var will store global execution context but let and const store in Temporal Dead Zone (TDZ)
+
+'use strict' (Strict Mode)
+    
+    Strict Mode is feature that allows you to place a program, or function, in a strict operating context.
+
+Nan (not-a-number)
+
+    The Nan property in javascript represents a value that is "Not-a-number", indicating an illegal or undefined numeric value. 
+
+    console.log(typeof(NaN)) // * number
+
+Javascript statically typed or a dynamically typed language?
+    
+    Javascript is a dynamically typed language. in a dynamically typed language, variable types are determined at runtime, allowing a variable to hold values of any type without explicit type declarations. This flexibility can make coding more convenient but may also lead to runtime errors if types are not handled appropriately.
+
+what is Dom?
+
+    Dom stands for Document object Model, serving as a programming interface for web documents.
+
+what is BOM?
+
+    BOM is a programming interface extending beyond DOM, providing control over browser-related features.
+
+THIS : 
+    
+    In javascript, the this keyword is a special variable that is automatically defined in the scope of every function. Its value depends on how the function is invoked. The this keyword is used to refer to the object that is the current context of the function or, more simply, the object that the function is a method of.
+
+<!-- What is scope in Javascript?
+
+    in JavaScrit, the term "scope" refers to the context in which  -->
+
+Asynchronous and synchronous :
+
+Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously. Synchronous is a blocking architecture, so the execution of each operation depends on completing the one before it. Each task requires an answer before moving on to the next iteration.
+
+diff between single thread and multi thread:
+
+    A Multi-threaded server can process multiple CPU-intensive tasks concurrently, whereas a single-threaded server can only handle one task at a time.
+
+let, const,var :
+
+    let and const are block scope. during the hoisting, variable declaration top of their scop but not initialized , we can't access the variable because of tempraory dead zone. try to access means we got referance error. let we can reinitialized the value but we con't redeclare. const we can't reinitialized we can't redeclare when the declaration we should assign the value in const.
+
+    var is global or function scop . during the hoisting, variable declaration go to top of their scop and initialized undifined, before accessing the variable we got undifind becuse of hoisting. we can redeclare and reinitialized the value.
+
+Hoisting :
+
+    Hoisting is the Javascript mechanisam;
+
+    In JavaScript, hoisting refers to the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution.
+
+closer :
+
+    A closure in JavaScript is a function that retains access to its lexical scope, even when that function is executed outside of its lexical scope. Closures are created whenever a function is defined within another function, allowing the inner function to access the variables and parameters of the outer function, even after the outer function has returned.
+
+    drowback : 
+        
+        Memory Consumption: Since closures retain references to their lexical scope, they can prevent variables from being garbage collected, leading to increased memory usage if not managed properly.
+
+        Complexity and Debugging: Closures can make the code more complex and harder to debug, especially with deeply nested functions and multiple layers of scope.
+
+    application :
+
+        Data encapsulation and privacy.
+        Maintain state
+
+TDZ :
+
+    The period between the entering of the block scope and the actual declaration of a let or const variable. 
+        or
+    The Temporal Dead Zone (TDZ) is a behavior in JavaScript that affects variables declared with let and const. It refers to the time period during which these variables are hoisted but not yet initialized, making them inaccessible until the declaration is encountered in the code.
+
+pure function, impure function :
+
+    Pure Function: Always produces the same output for the same input and has no side effects.
+
+    Impure Function: May produce different outputs for the same input and can have side effects that affect the external state.
+
+
+
+// # callback
+
+    In JavaScript, a callback is a function that is passed as an argument to another function and is executed after some operation has been completed. Callbacks are used to handle asynchronous operations such as reading files, making network requests, or responding to user events.
+
+// # Higher order function
+
+    function takes valuse as function in their parameter which is call higher order function
+    
+
+// # Generator function
+
+A generator function in JavaScript is a special type of function that can pause its execution and later resume from where it paused. These functions are defined using the function* syntax and use the yield keyword to pause execution.
+
+// # factory function
+
+    A factory function in JavaScript is a function that creates and returns objects. It's a way to encapsulate the object creation process, allowing you to create multiple instances of an object without using the new keyword or defining a constructor function or class. Factory functions can also include logic to initialize the objects they create
+
+// # constructor function
+
+    A constructor function in JavaScript is a function used to create objects and initialize them with specific properties and methods. When called with the new keyword, a constructor function sets the properties of the newly created object and allows for custom initialization logic.
+
+// # IIFE (imidaiate invoked function)
+
+    An Immediately Invoked Function Expression (IIFE) is a function that is defined and executed immediately after its creation. It is often used to create a local scope to avoid polluting the global namespace, which can help prevent variable name conflicts in your code.
+
+
+// # regular function VS Arrow function 
+
+    regular function and Arrow function has some difference between syntax and usage . In side of object if we use regular function we can access the value form their lexical scop but Arrow function we can't do.
+
+// # Type casting
+
+    Type casting is the explicit conversion of a value from one type to another using built-in functions or methods. The developer explicitly specifies the desired type conversion.
+
+    Type Casting: Developer has full control over the conversion process.
+
+// # Type Coercion
+ 
+    Type coercion is the implicit conversion of a value from one type to another that occurs automatically in certain contexts, such as in expressions involving mixed types or during type comparisons. This is handled by JavaScript without explicit instructions from the developer.
+
+    Type Coercion: Conversion is handled automatically by JavaScript.
+
+
+// # AJAX
+
+Ajax (Asynchronous JavaScript and XML) is a set of web development techniques that allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page without reloading the whole page.
