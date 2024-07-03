@@ -1,0 +1,45 @@
+
+// # cookie
+
+   A cookie is a small piece of data stored on the user's computer by the web browser while browsing a website. Cookies are used to store information about the user's session, preferences, and interactions with the site. 
+   cookie size 14 kB
+
+// # Cache
+
+    Caching is a technique used to store copies of files or data in a temporary storage location, or cache, so that they can be accessed more quickly. It improves the performance and efficiency of applications by reducing the need to repeatedly fetch data from the original source.
+    cache size 1 MB to 8MB but not sure
+
+// # Dependencies
+
+    Dependencies are the crucial packages required for your application to function in a production environment. 
+
+// # Devdependencies
+
+    Dev dependencies are packages required only for the development phase and not for the application to run in production.
+
+// # http methods
+
+    GET, POST, PUT, PATCH, DELETE
+
+// # parts of request and response
+
+    //* Request
+
+    Requestline, Header, body
+
+    /* Response
+
+    Response line, Header, body
+
+// # res.send vs res.write
+
+    res.write :
+        Lower-level method from Node.js http module, requires manual handling of headers and ending the response.
+        Suitable for more complex scenarios, such as streaming data or sending multiple chunks of data over time.\
+        Does not end the response; you must call res.end to complete the response.
+
+    res.send :
+        Higher-level method provided by Express.js, handles headers and ending the response automatically.
+        Ideal for simple responses, such as JSON, HTML, or plain text.
+         Automatically ends the response.
+
