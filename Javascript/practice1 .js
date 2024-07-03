@@ -271,3 +271,32 @@ async function checkAsync(){
     let resultSpread = [...spreadArr, ...spreadArr1]
 
     console.log(resultSpread)
+
+
+// currying
+
+    function curr1(a){
+        return function (b){
+
+            return function (c){
+                console.log(a+b+c)
+                return a+b+c
+            }
+        }
+    }
+
+    // console.log(curr1(2)(3)(5))
+
+
+// # optional chaining
+
+const objOptional = {
+    name : 'suresh',
+    collage :{
+        machanic :{
+            sub : 'BOM'
+        }
+    }
+}
+objOptional?.collage?.machanic?.sub
+// console.log(objOptional?.collage?.machanic?.sub)

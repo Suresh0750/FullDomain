@@ -210,7 +210,7 @@ pure function, impure function :
     
     If will give resulte which is resolve.
 
-// async and await 
+// # async and await 
 
     Async/await provides a powerful way to write asynchronous code in a more synchronous fashion, improving readability, error handling, and overall code structure. It helps avoid callback hell and makes managing multiple asynchronous operations more straightforward.
 
@@ -259,4 +259,18 @@ pure function, impure function :
 // # passed by refference
 
     To pass the value when we call the function, if we change that value inside of the function it will be affect the actual variable. beacause of it is non-primitive valuen example: array and object
-    
+
+// # currying
+
+    Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function
+
+
+// # optional chaining
+    Optional chaining is a feature in JavaScript that allows you to safely access deeply nested properties of an object without having to explicitly check if each reference in the chain is null or undefined. This feature helps to avoid errors and makes the code cleaner and more readable.
+
+// # Global execution context
+    Global execution context: This is the execution context for the global scope. It is created when the JavaScript engine starts up. Function execution context: This is the execution context for a function. It is created when the function is called
+
+
+// # Event loop
+    JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
