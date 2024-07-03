@@ -1,7 +1,46 @@
 CRUD Method Database:
 
+// # Database
 Create :
     use Database;
 Read :
     show Databese;
 
+Delete :
+    db.dropDatabase();
+
+
+// # collections
+
+Create : 
+    db.createCollectin('collectionName')
+Read  :
+    show collections;
+update :
+    db.collectionName.renameCollection('newName');
+Delete :
+    db.collectionName.drop()
+
+
+// # Document
+
+Create:
+    db.collectionName.insertOne({collection})    // * this for insert one collection
+    db.collectionName.insertMany([{}]) // * this.for for insert multiple document
+
+Read :
+    db.collectionName.findOne()         //* using for finding one document
+    db.collectionName.find()            //* using for finding Multiple document
+
+Update :
+    db.collection.updateOne({// here codition},{$set:{//here mention the value}})
+    db.collection.updateMany({},{$set:{}})
+    db.collectionName.findOneAndUpdate({},{$set:{//here mention the value}})
+
+Replace :
+    db.collectionName.findOneAndReplace({//here mention the condition},{// here mention the value})  // * it will Replace the entire document particulre object based on that condition
+
+Delete :
+    db.collectionName.deleteOne({// here mention condition});
+    db.collectionName.deleteMany({// here mention condition})
+    db.collectionName.findOneAndDelete({// here mention condition})
