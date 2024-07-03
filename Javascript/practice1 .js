@@ -261,3 +261,13 @@ async function checkAsync(){
         console.log('helow all')
     },3000)
 }
+
+// spread operater
+
+
+    let spreadArr = [1,3,4,5,6,7]
+    let spreadArr1 = [5,6,7,8,9,0]
+
+    let resultSpread = [...spreadArr, ...spreadArr1]
+
+    console.log(resultSpread)

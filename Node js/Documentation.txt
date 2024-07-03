@@ -41,5 +41,23 @@
     res.send :
         Higher-level method provided by Express.js, handles headers and ending the response automatically.
         Ideal for simple responses, such as JSON, HTML, or plain text.
-         Automatically ends the response.
+        Automatically ends the response.
 
+//  # Middleware 
+
+    In Express.js, middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. Middleware can perform various tasks such as executing code, modifying the request and response objects, ending the request-response cycle, and calling the next middleware function in the stack.
+
+// # Types of middleware
+
+    1) Application middleware
+    2) Router middleware
+    3) Error handling middleware
+    4) Build in middleware
+    5) Third-party Middleware
+
+    // * Application Middleware
+
+        Application-level middleware is bound to an instance of the express application and is executed for every incoming request to the application.
+    // * Router middleware
+
+        Router-level middleware works similarly to application-level middleware but is bound to an instance of express.Router(). It is useful for organizing middleware and routes into modular, mountable route handlers.

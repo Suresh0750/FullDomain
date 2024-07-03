@@ -213,3 +213,50 @@ pure function, impure function :
 // async and await 
 
     Async/await provides a powerful way to write asynchronous code in a more synchronous fashion, improving readability, error handling, and overall code structure. It helps avoid callback hell and makes managing multiple asynchronous operations more straightforward.
+
+
+// # web API
+
+    A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server.
+    // * Here we use callback queue and event loop
+    
+// # shallow copy 
+
+    In JavaScript, a shallow copy is a copy of an object or an array where only the top-level structure is duplicated, while the nested structures are still referenced.
+
+// # deep copy
+
+    A deep copy is a copy that creates a new object with new memory locations for all of its properties and nested objects or arrays. It means that if you make changes to the copied object or any of its nested objects or arrays, it will not affect the original object.
+// # typesof
+
+    typesof use to identify the type
+
+// # isArray
+
+    it is check whethere the variable is Array or not.
+
+// # map loop
+
+    // map loop is used for iterating the array. it will interact each and every element
+
+// # filter
+
+    // filter is only we can use in an array and it is used to filter the value from the array
+
+// # reduce 
+    // reduce used for in array iterating and it will return a single value
+
+// # spread 
+    //Useful for copying and merging arrays or objects, and for spreading elements in function calls.
+
+// # rest operater
+    Useful in function parameters to handle a variable number of arguments, and in destructuring assignments to gather the remaining elements.
+
+// # passed by value
+
+    To pass the value when we call the function, if we change that value inside of the function it wo'n be affect the actual variable. beacause of it is primitive value
+
+// # passed by refference
+
+    To pass the value when we call the function, if we change that value inside of the function it will be affect the actual variable. beacause of it is non-primitive valuen example: array and object
+    

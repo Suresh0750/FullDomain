@@ -29,7 +29,7 @@ Create:
     db.collectionName.insertMany([{}]) // * this.for for insert multiple document
 
 Read :
-    db.collectionName.findOne()         //* using for finding one document
+    db.collectionName.findOne()         //* using for finding one document and it show only 19 document
     db.collectionName.find()            //* using for finding Multiple document
 
 Update :
@@ -44,3 +44,57 @@ Delete :
     db.collectionName.deleteOne({// here mention condition});
     db.collectionName.deleteMany({// here mention condition})
     db.collectionName.findOneAndDelete({// here mention condition})
+
+// # filed inside the document
+
+Create :
+    db.collectionName.updateOne({// here condition},{$set:{}})  // using update query we can create filed
+    db.collectionName.updateMany({// here condition},{$set:{}})  // using update query we can create filed
+
+Read :
+    db.collectionName.findOne()
+    db.collectionName.find()
+
+update : 
+    db.collecionName.updateOne({//mention the unique},{$set :{filed : new value}})
+    db.collecionName.updateMany({//mention the unique},{$set :{filed : new value}})
+    db.collecionName.findOneAndUpdate({//mention the unique},{$set :{filed : new value}})
+
+delete :
+
+    db.collectionName.updateOne({//here condition},{$unset:{filed:value}})
+
+
+// **********************CRUD OPERATION FINISHED****************************************
+
+
+// **************************USE QUERY********************************************
+
+
+// # to.Array()
+
+    db.collectionName.find().toArray()
+
+// # forEach
+    db.collectionName.find().forEach((val)=>{     // *it wil coming one by one document
+        print(val)
+    })
+
+// # distinct
+
+    db.collectionName.distinct()  // * it use for we want to value only in side of the every document but inside of the bracket we should mention that key it will give the value of array format example : we want age from every document we can use distinct('age') it will give [21,32,13,15]
+
+// # sort 
+
+    db.collectionName.find().sort('mention the field').forEach((val)=>{
+        print(val)
+    })
+
+// # skip
+
+    db.collectionName.find().sort().skip('mention the home many skip')
+
+// # count
+
+    db.collectionName.find().count()
+
