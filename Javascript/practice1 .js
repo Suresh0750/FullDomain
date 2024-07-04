@@ -300,3 +300,38 @@ const objOptional = {
 }
 objOptional?.collage?.machanic?.sub
 // console.log(objOptional?.collage?.machanic?.sub)
+
+
+let checkNull = null ?? 'this is check null is operator'
+
+// console.log(checkNull)
+
+
+// # class and Object
+
+
+class student{
+    constructor(name, fullName,collage){
+        this.name = name,
+        this.fullName = fullName,
+        this.collage = collage
+    }
+}
+
+const suresh = new student('suresh','sureshVarma','PSN')
+
+
+const createDiv = document.createElement('div')
+
+createDiv.id = 'unique'
+createDiv.className = 'puplic'
+
+const createHtml = document.createElement('html')
+createHtml.appendChild(createDiv)
+
+
+// # addEventListener 
+
+    createDiv.addEventListener('click',()=>{
+        console.log('hellow')
+    })

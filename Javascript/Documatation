@@ -274,3 +274,73 @@ pure function, impure function :
 
 // # Event loop
     JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+
+// # microtask
+
+    JavaScript is a single-threaded language, but using web API JavaScript can maintain its asynchronous function. When an asynchronous task comes to the call stack browser set it into the hashtag#webAPI and then when the task is ready for execution its placed into the call back queue or microtask queue. Finally, when hashtag#callStack is empty event loop first checks the microtask queue. If there have any task events loop take those over the call-back queue. After finishing all microtask the hashtag#eventLoop starts executing the callback queue's task. Event loop gives priority microtask queue over call back queue. Now the question is how/why JavaScript decides which task should place into the microtask queue and which into the hashtag#callback queue. In JavaScript, the task scheduling algorithm determines which tasks go into the microtask queue and which tasks go into the callback queue. The microtask queue is used for tasks that need to be executed as soon as possible, such as promise resolutions and mutations to the DOM. The callback queue is used for tasks that can be executed at a later time, such as click events and timers
+
+// # Nullish operator
+
+The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+
+// # Bitwise operator
+    JavaScript converts numbers to 32 bits signed integers.
+    After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers.
+
+// # class or object   
+
+    Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes. 
+
+// # constructor
+
+    A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.
+
+// # object declaration
+    It has many wase to create an object. 
+    Using constructor  function
+    Using factory object
+    Object.create()
+    Object.assign({},obj)
+
+
+// # append, appendChild
+
+    It is used to append the Node, 
+
+    // * appendChild
+        appendChild adds a single node as a child to the parent node.
+    // * append 
+        append can append multiple nodes and strings, and is more flexible than appendChild.
+
+// # addEventListener
+    In JavaScript, event listeners allow you to execute a function when a specific event occurs on an element. This is useful for creating interactive web pages. The most common way to add an event listener is by using the addEventListener method.
+
+// # querySelector and querySelector all    
+    The querySelector and querySelectorAll methods in JavaScript are powerful tools for selecting elements from the DOM using CSS selectors. These methods allow you to easily and flexibly select elements based on their classes, IDs, attributes, and more.
+    
+// # Array method
+    // Array.from()  // * IS working like split method
+    // Array.isArray() // * Check whether array is or not
+    // Array.of()     // * Array.of(1,2,3,4,5) // * output [1,2,3,4,5]
+    // Array.push(9)    // * push the value to array
+    // Array.pop()      // * pop the value from the array
+    // Array.shif()     // * remove the value infront of the array
+    // Array.unshift()  // * push the value from infront of the array
+    // Array.splice()   // * it is used for deleting and inserting the value to array. it has three parameter (denoting where its start,delete count, add the value)
+    // Array.concat()   // * concat the value or merging two array and merging two string
+
+    // Array.forEach()  // * using for iterating the array with each element it won't return 
+    // Array.map()      // * using for iterating the array with each element it will return new Array
+    // Array.filter     // * using for filter the array based on giving the condition
+
+    // Array.reduce(acc,curr,ind)     // * Execute the each element from that array ans it will return a single value
+    // Array.reduceRight(acc,curr,ind)  // * reduce and reduceRight work like same but reduceRight work from reverse side
+    // Array.find()                     // * it using like find the count
+    // Array.indexOf()                // * find index of the value from that array
+    // Array.lastIndexOf(val)         // * find index value , last from the array
+
+    // Array.includes(val)             // * It is used to use the value is there or not and it will return the boolean value
+    // Array.sort((a,b)=> a-b)         // * it is used to sort the array assending and dessending order
+    // Array.reverse()                  // * using for reverse the array
+    // Array.join(',,_,.,=')            // * using for join the value from array and we can mention which value want to present intermidiate
+    // Array.slice()                    // * usign for slice the value
