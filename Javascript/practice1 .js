@@ -335,3 +335,115 @@ createHtml.appendChild(createDiv)
     createDiv.addEventListener('click',()=>{
         console.log('hellow')
     })
+
+
+    console.log('********this keyword***********')
+// # this keyword 
+    // * global this 
+    console.log(this)  // * this keyword is refer the global object  in browser it mention window but nodejs in this keyword is different
+
+    function thisKey (){
+        // the value is debends on stirct mode and non strict mode
+        "use strict"  // * if we not use use strict mode this is denote global object using use strict inside of the function we got only undifened
+        console.log(this)
+    }
+    thisKey()
+
+    // * if we want do work this keyword inside of the function with using 'use strict' mode we can use window.callfunction ex: window.thisKey()
+
+    window.thisKey()
+
+    // # using object inside method
+
+    const objThis = {
+        name : 'suresh',
+        age : 21,
+        k : function(){
+            "use strict"
+            console.log(this)  // * here this keyword will be refere this object
+            return this
+        },
+        x : ()=>{
+            'use strict'
+            console.log(this)  // * this will refer the global scope so here it will refere windowsobject
+        },
+        z : function (){
+            let k = 10
+            return ()=>{
+                console.log(this) // * this will refere global but has some different this global will refer that obj 
+            }
+        }
+    }
+
+//    let accesProperty =  objThis.k()
+//    console.log(accesProperty.age)
+
+objThis.x()
+objThis.k()
+console.log(objThis.z())
+let newOne= objThis.z()
+newOne()
+
+console.log('******End this keyword******')
+
+
+// # call, apply, bind
+
+    function callFun(a,b){
+        console.log(this)
+        console.log(a+b)
+    }
+    let student1Call = {
+        name : 'suresh',
+        age : 21,
+        work : 'Mechanical',
+        x : function(){
+            console.log(this.name , this.age, this.work)
+        }
+    }
+
+    let callObj = {
+        name :'suresh',
+        age : 22,       //* this object we want to use student1call inside of the function here
+        work : 'MERN Stack developer'
+    }
+
+    // callFun.call(callObj,4,5)
+    student1Call.x.call(callObj)
+
+    function applyFun(para1,para2){
+        console.log(para1,this.name,para2, this.work,'going')
+    }
+
+    applyFun.apply(callObj,['hi','how your'])
+
+    //* bind
+
+    let bindObj = applyFun.bind(callObj)  // * call that function with another obj and assing that
+
+
+// # shadowing
+    var a = 10
+    {
+        let a = 20
+        let b = 30
+        const c = 50
+    }
+    console.log(a)    // legal shadowing var a is store in global and the let store in block
+
+    // illegal shadowing
+
+    let n = 30
+    {
+        // var n = 90   // Here we can't use this beacause it will throw an error beacuse the var we use inside of the block that n already store let we con't redeclare 
+                        // that's why this is illegal shadowing
+    }
+
+    // blocking code
+
+
+    // while(Date.now()-5000){
+    //     console.log('blcok')   // this code take much more time to complete this task so this blcoking our website resposive // we can use this code asynchronous function
+    // }
+     
+    

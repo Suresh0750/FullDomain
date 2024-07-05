@@ -317,7 +317,36 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 
 // # querySelector and querySelector all    
     The querySelector and querySelectorAll methods in JavaScript are powerful tools for selecting elements from the DOM using CSS selectors. These methods allow you to easily and flexibly select elements based on their classes, IDs, attributes, and more.
-    
+
+// # Dom Events 
+    DOM events in JavaScript are actions or occurrences that happen in the browser, like a user clicking a button, a webpage loading, or a form being submitted. JavaScript can be used to listen for these events and execute code in response.
+    example : 
+        click
+        dbClick,
+        mouseover,
+        mouseup,
+        mouseDown,
+
+
+// # Event pubbling
+
+    If we call the child it will triger their parant it called event pubbling for example we have 3 nested div with event if I call the child after completing that event that parant will call. The event trigger upto the hierorge 
+
+// # Event capturing
+
+    it is opposite event pubbling if I call the child the parant event first triger and work and that the child will work.
+    Event capturing another name of event trickling 
+
+// # Event propagetion 
+
+    The event pubbling and capturing is happen beacause of this event propgetion, the event is propaget parent or child. should prevent that we can use event.stopPropagation()
+
+// # Event delegation   
+    Event delegation is a technique in JavaScript where we delegate the responsibility of handling an event to a parent element. 
+
+    // * if we click the child the event is triger the parent that is event bubbling so that event we delegate or give a responsibility or work do somthing is call event delegation.  // * for understanding
+
+
 // # Array method
     // Array.from()  // * IS working like split method
     // Array.isArray() // * Check whether array is or not
@@ -344,3 +373,74 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     // Array.reverse()                  // * using for reverse the array
     // Array.join(',,_,.,=')            // * using for join the value from array and we can mention which value want to present intermidiate
     // Array.slice()                    // * usign for slice the value
+
+
+// # string methods
+    
+    // str.length
+    // str.charAt(0)                    // this for indentify the value keep the index
+    // str.charCodeAt(0)                // This is for using find the ASCII value of the character
+    // str.concat(//give an str)        // concat the string or merge two string
+    // str.includes('word')             // This is for  find that value is there or not it will give boolean value
+    // str.indexOf('word')              // find the index number
+    // str.lastIndexOf('word')          // find the last index of the value
+
+// # this keyword
+
+    In JavaScript, the 'this' keyword refers to the object that is currently executing or calling the function. It is a way to access and manipulate the properties and methods of the object that called the function.
+
+// # call, apply, bind
+    // # call
+
+    // using call method we can borrow the function from function or inside of the object function
+    // * applye
+    // apply and call usage both are same but has some different, when call the function we should pass the valud should be array format
+
+    // * bind
+    // bind syntex like call and apply, but we can assign to another variable and we can access the function using wiht variable
+
+
+
+// # use strict
+
+    // * use strict using the javascript strict mode
+
+// # NaN (not an number)
+
+    // * is check whether the value is number or not and it will return boolean value
+
+// # ES6 features
+
+    let,const
+    Arrow function,
+    default parameter,
+    map,reduce, filter,
+    templeate literals and etc.
+
+// # legal shadowing and illegal 
+
+    Now, while shadowing a variable, it should not cross the boundary of the scope, i.e. we can shadow var variable by let variable but cannot do the opposite. So, if we try to shadow let variable by var variable, it is known as Illegal Shadowing and it will give the error as “variable is already defined.”
+
+// # JSON.stringfy()
+
+    it will convert the value entirly string even that quetation or , {},[] everything is convert to the string
+
+// # JSON.parse()
+
+    // it use for after converting the string we need to convert value for using purpose we can use this JSON.parse()
+
+// # conditional operator
+    // conditional operator is also called by ternary operater and syntex( true ? work : work;)  it will work based on that condition
+
+// # prototypes and prototype chain
+    // Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+
+// # Object.seal
+
+    // # using Object.seal we can't add property and we can't delete property but we can modified
+
+// # Object.freeze 
+    // usign Object.freeze we can't add,delete,modified properties
+
+    
