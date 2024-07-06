@@ -61,3 +61,68 @@
     // * Router middleware
 
         Router-level middleware works similarly to application-level middleware but is bound to an instance of express.Router(). It is useful for organizing middleware and routes into modular, mountable route handlers.
+
+
+// Cookies vs Cache
+    Cookies and cache are both used by web browsers to enhance the browsing experience, but they serve different purposes and function in different ways.
+    Cookies are used to store data related to a user's interactions with a website. This data can include login information, user preferences, and other session-related information.
+    
+    // clear chache
+        app.use((req, res, next) => {
+            res.set("Cache-Control", "no-store");
+            next();
+        });
+    
+        chache :
+        Cache is used to store copies of files or data so that future requests for that data can be served faster.
+
+// dependencies and Devdependencies
+
+    Dependencies are the crucial packages required for your application to function in a production environment. At the same time, devDependencies are tools and utilities that aid in the development process but are not needed in production.
+
+
+// http methods
+
+    GET,POST,PUT,PATCH,DELETE
+
+    // * get method for reading the files
+    // * post method for creating the files
+    // * put method for updatating the entire document
+    // * patch method for update the single filed or small thing inside of the document
+    // * delete for delete the filed or data
+
+
+// # parts of request and response
+
+    // * request 
+        Request line ,
+        header,
+        body
+    
+    // * response
+        status line,
+        Header,
+        body
+
+// # res.send vs res.write
+
+    // * Both are used to send the data backend to cliend but res.send we in express and res.write we used in native http module (Node js).
+
+    // * res.send automatically call the res.send we don't want to mention that, but in Node js using res.write we should call the res.end for ending the response
+
+    // * res.write we should manually mention the Content-Type, in case of the Express using res.send we don't do mention that
+
+
+// # middleware, Application-level middleware, router-level middleware
+
+   // * middleware 
+
+       The middleware in node. js is a function that will have all the access for requesting an object, responding to an object, and moving to the next middleware function in the application request-response cycle.
+
+    // * Application-level midddleware 
+
+        There are two types of middleware in Express. js: application-level middleware and router-level middleware. Application-level middleware is used to process requests for the entire application and is registered using the app.use() method.
+
+    // * router-level middleware
+
+        Router-level middleware, on the other hand, is used to process requests for a specific route or set of routes and is registered using the router. use() method.

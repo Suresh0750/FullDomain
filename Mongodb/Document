@@ -1,0 +1,14 @@
+
+// # why we use bson in mongodb
+
+    This binary format is more efficient for both storage and traversal, making operations faster.
+    esay to encoding and decoding and read and write
+
+    Index Efficiency: BSON allows for efficient indexing and quick retrieval of documents. The binary format allows MongoDB to traverse indexes quickly, speeding up query performance.
+// capped true
+  
+
+    // capped we use for  set the size of the collection and collection has some size for example that collection only we can set 10 document we can't add document if the capped is true
+// means we can add a document but the frent of the document will be delete because the collection have some particular size.
+
+

@@ -63,6 +63,13 @@ update :
 delete :
 
     db.collectionName.updateOne({//here condition},{$unset:{filed:value}})
+    db.collectionName.updateOne({//here condition},{$unset:{filed:"$field}})  // * we not sure about the value means we can mention the filed with $ symbol
+    db.collectionName.updateMany({//here condition},{$unset:{filed:"$field}})   
+
+Rename the filed :
+
+    db.collecionName.updateOne({//condition},{$rename:{'oldName':'New name'}});
+
 
 
 // **********************CRUD OPERATION FINISHED****************************************
@@ -98,3 +105,18 @@ delete :
 
     db.collectionName.find().count()
 
+
+
+// # capped collection
+
+    db.createCollection('new name',{capped:true,autonIndexId:true,size:123455,max:100})  //size is mention the size of the document how many bytes, max allow the total number of document
+
+
+
+
+// # array
+
+
+    db.collectionName.updateOne({},{$push:{field:value}})
+    db.collectionName.updateOne({},{$push:{$each:{field:['val','val','val']}}})
+    db.collectionName.updateOne({},{})
