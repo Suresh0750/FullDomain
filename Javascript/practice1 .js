@@ -447,3 +447,25 @@ console.log('******End this keyword******')
     // }
      
     
+// # Proxy Object
+
+const target = {
+    message1: "hello",
+    message2: "everyone"
+  };
+  
+  const handler = {
+    get: function(target, property) {
+      if (property === 'message1') {
+        return 'world';
+      }
+      return target[property];
+    }
+  };
+  
+  const proxy = new Proxy(target, handler);
+  
+  console.log(proxy.message1); // Outputs: world
+  console.log(proxy.message2); // Outputs: everyone
+  
+  console.log(proxy)

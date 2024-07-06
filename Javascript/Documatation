@@ -12,7 +12,6 @@ How do you  detect primitive or non primitive value types in javascript?
 
 Non-primitive values are objects, which include arrays, fruntions, and custom objects.
 
-
 how many data type is js ?  (9)
 primitive data type: 
  Number, string, Boolean, Undefined,Null, BigInt,and Symbol
@@ -36,7 +35,7 @@ what is variable ?
 scope : 
 
    block scop : let and const is block scop.
-   var : function scope or global scopt.
+   var : function scope or global scop.
 
 JS key features :
     
@@ -262,8 +261,7 @@ pure function, impure function :
 
 // # currying
 
-    Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function
-
+    Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
 
 // # optional chaining
     Optional chaining is a feature in JavaScript that allows you to safely access deeply nested properties of an object without having to explicitly check if each reference in the chain is null or undefined. This feature helps to avoid errors and makes the code cleaner and more readable.
@@ -443,4 +441,43 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 // # Object.freeze 
     // usign Object.freeze we can't add,delete,modified properties
 
+// # Proxy Object
+    A Proxy object in JavaScript is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). It allows you to create an object that intercepts and customizes operations performed on 
+
+// # map and set 
+
+    Maps, which are ordered collections of key/value pairs, and Sets, which are collections of unique values.
+
+
+// # weekSet 
     
+    weekSet is the collection of object,similar to Set, but with a few key differences. if you delete the object the corbage will collect that.
+
+// # weekMap
+
+    WeakMap: Useful for associating metadata with objects, such as caching results or storing private data for objects, without risking memory leaks.
+
+// # null pointer exception
+
+    whenever we try to access the null or undefined value of variable we encountered this error null pointer exception. Most of the case in nested object
+
+// # ternary operator
+
+    ternary operator is the conditional operater it's work like if and else (condition ? work what we want to the condition is satisfied : write what we want to the condition is not satisfied)
+
+// # polyfiles 
+
+    Polyfills are pieces of code that provide modern functionality to older browsers that lack native support for those features. They bridge the gap between the JavaScript language features and APIs that are available in modern browsers and the limited capabilities of older browser versions.
+
+
+// # jagged array
+
+    jagged array is also called ragged array . if the nested array dosn't have same length that called jagged array.
+
+
+// # Concurrency 
+
+    Concurrency is about dealing with multiple tasks at the same time but not necessarily executing them simultaneously. It involves managing multiple tasks that make progress within overlapping time periods.
+
+// # Regular expression
+    What is JavaScript RegExs? A JavaScript RegEx is a sequence of characters that forms a search pattern.
