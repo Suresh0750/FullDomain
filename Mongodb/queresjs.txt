@@ -92,10 +92,14 @@ Rename the filed :
     db.collectionName.distinct()  // * it use for we want to value only in side of the every document but inside of the bracket we should mention that key it will give the value of array format example : we want age from every document we can use distinct('age') it will give [21,32,13,15]
 
 // # sort 
+    ascending order :
 
-    db.collectionName.find().sort('mention the field').forEach((val)=>{
+        db.collectionName.find().sort('mention the field').forEach((val)=>{
         print(val)
     })
+
+    descending order : 
+        db.collectionName.find().sort({field:-1})
 
 // # skip
 
@@ -112,11 +116,19 @@ Rename the filed :
     db.createCollection('new name',{capped:true,autonIndexId:true,size:123455,max:100})  //size is mention the size of the document how many bytes, max allow the total number of document
 
 
+// # find above some value
+    db.collectionName({fildName:{$gt:value}})
+    db.collectionName({fildName:{$gte:value}})
 
+// # find bellow some value
+    db.collectionName({fildName:{$lt:value}})
+    db.collectionName({fildName :{$lte:value}})
 
 // # array
 
-
     db.collectionName.updateOne({},{$push:{field:value}})
-    db.collectionName.updateOne({},{$push:{$each:{field:['val','val','val']}}})
-    db.collectionName.updateOne({},{})
+    db.collectionName.updateOne({},{$push:{field:{$each:['val','val','val']}}})
+    db.collectionName.updateOne({},{$addToSet:{field:{$each:['val','val']}}})   // * using for array only accepting unique value
+    db.collectionName.updateOne({},{$pull:{field:'val'}})
+    db.collectionName.updateOne({},{$pull:{field:{$in:['val','val']}}})
+

@@ -9,6 +9,9 @@
   
 
     // capped we use for  set the size of the collection and collection has some size for example that collection only we can set 10 document we can't add document if the capped is true
-// means we can add a document but the frent of the document will be delete because the collection have some particular size.
+   // means we can add a document but the frent of the document will be delete because the collection have some particular size.
 
+    db.createCollection("collectionName",{capped:true,size:56112,max:100,autoIndexId:true})
 
+        // * here size is mention the size in bit format and max is denoted how many document should be allow and autoIndexId is true means we can't add _id manually it's created automatically, but using false we can add manually _id and if we not add manually id created automatically.
+    
