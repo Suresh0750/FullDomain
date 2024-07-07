@@ -130,6 +130,14 @@ let student1 = Object.assign({},obj,collage)   // * { name: 'sunnampu', age: 21,
 //    console.log(keyGen.next().value)
 //    console.log(keyGen.next().value)
 
+// factory fucntion
+
+    function factory(name,age){
+        return {
+            name,
+            age
+        }
+    }
 
 // # constructor function 
 

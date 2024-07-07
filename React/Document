@@ -1,0 +1,14 @@
+
+
+// # What is JSX ?
+
+    // JSX is javascript xml extention that is allow to write HTML code in side of the javascript
+
+// # How the jsx conver to js
+// JSX is transformed into regular JavaScript before it is executed in the browser. This transformation is done using a tool called a transpiler. The most popular transpiler for JSX is Babel. Babel transforms the JSX code into a series of function calls.
+
+// # What are the life cycle methods in class based components ?
+
+// React supports three mounting lifecycle methods for component classes: componentWillMount() , render() , and componentDidMount() 
+
+// # 
