@@ -56,7 +56,7 @@ Arrow fuctions :
 
 global execution contaxt
 
-    The global execution context is the default is the default or base execution context in Javascript. It is created when your Javascript code starts to run, and it governs the environment in which the code executes.
+    The global execution context is the default  or base execution context in Javascript. It is created when your Javascript code starts to run, and it governs the environment in which the code executes.
 
     while hoisting time var will store global execution context but let and const store in Temporal Dead Zone (TDZ)
 
@@ -193,21 +193,26 @@ pure function, impure function :
 // # promise
 
     A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner, more manageable way to handle asynchronous operations compared to traditional callback-based approaches.
+    Promise used to avoid the inversion of control .  what is meaning of inversion of control means if we use callback hell, the each callback depending on completion of one before it, we can't trust because if the function call two time means what would happend for the we 
+        can use promise . it call once. 
+
 
     promise state:
         pending,fullfiled,rejection
 
-// # promise.allSettled 
+promise methods :
 
-    A promise.allSettled if the promise either failure or succese it will show the result with status code
+    // # promise.allSettled 
 
-// # promise.all
+        A promise.allSettled if the promise either failure or succese it will show the result with status code
 
-    If all promise succese means it succese if any one of the promise failure means if it fails.
+    // # promise.all
 
-// # promise.any
-    
-    If will give resulte which is resolve.
+        If all promise succese means it succese if any one of the promise failure means if it fails.
+
+    // # promise.any
+        
+        If will give resulte which is resolve.
 
 // # async and await 
 
@@ -236,7 +241,7 @@ pure function, impure function :
 
 // # map loop
 
-    // map loop is used for iterating the array. it will interact each and every element
+    // map loop is used for iterating the array. it will interact each and every element and it will return new array
 
 // # filter
 
@@ -275,7 +280,8 @@ pure function, impure function :
 
 // # microtask
 
-    JavaScript is a single-threaded language, but using web API JavaScript can maintain its asynchronous function. When an asynchronous task comes to the call stack browser set it into the hashtag#webAPI and then when the task is ready for execution its placed into the call back queue or microtask queue. Finally, when hashtag#callStack is empty event loop first checks the microtask queue. If there have any task events loop take those over the call-back queue. After finishing all microtask the hashtag#eventLoop starts executing the callback queue's task. Event loop gives priority microtask queue over call back queue. Now the question is how/why JavaScript decides which task should place into the microtask queue and which into the hashtag#callback queue. In JavaScript, the task scheduling algorithm determines which tasks go into the microtask queue and which tasks go into the callback queue. The microtask queue is used for tasks that need to be executed as soon as possible, such as promise resolutions and mutations to the DOM. The callback queue is used for tasks that can be executed at a later time, such as click events and timers
+    JavaScript is a single-threaded language, but using web API JavaScript can maintain its asynchronous function. When an asynchronous task comes to the call stack browser set it into the hashtag#webAPI and then when the task is ready for execution its placed into the call back queue or microtask queue. Finally,
+     when hashtag#callStack is empty event loop first checks the microtask queue. If there have any task events loop take those over the call-back queue. After finishing all microtask the hashtag#eventLoop starts executing the callback queue's task. Event loop gives priority microtask queue over call back queue. Now the question is how/why JavaScript decides which task should place into the microtask queue and which into the hashtag#callback queue. In JavaScript, the task scheduling algorithm determines which tasks go into the microtask queue and which tasks go into the callback queue. The microtask queue is used for tasks that need to be executed as soon as possible, such as promise resolutions and mutations to the DOM. The callback queue is used for tasks that can be executed at a later time, such as click events and timers
 
 // # Nullish operator
 
@@ -391,7 +397,7 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     // # call
 
     // using call method we can borrow the function from function or inside of the object function
-    // * applye
+    // * apply
     // apply and call usage both are same but has some different, when call the function we should pass the valud should be array format
 
     // * bind
@@ -478,6 +484,10 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 // # Concurrency 
 
     Concurrency is about dealing with multiple tasks at the same time but not necessarily executing them simultaneously. It involves managing multiple tasks that make progress within overlapping time periods.
+
+// # concarrency
+
+    Parallelism involves executing multiple tasks simultaneously, typically using multiple processors or cores. In JavaScript, parallelism can be achieved using Web Workers or Worker Threads.
 
 // # Regular expression
     What is JavaScript RegExs? A JavaScript RegEx is a sequence of characters that forms a search pattern.
