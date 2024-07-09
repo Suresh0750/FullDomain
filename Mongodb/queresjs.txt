@@ -132,3 +132,8 @@ Rename the filed :
     db.collectionName.updateOne({},{$pull:{field:'val'}})
     db.collectionName.updateOne({},{$pull:{field:{$in:['val','val']}}})
 
+
+
+// #***********************Aggregation***************************
+
+
