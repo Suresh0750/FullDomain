@@ -477,3 +477,33 @@ const target = {
   console.log(proxy.message2); // Outputs: everyone
   
   console.log(proxy)
+
+
+
+// # Object.defineProperty()
+
+  let objectDefine = {}
+
+  Object.defineProperty(objectDefine,'name',{
+    configurable : true, 
+    value : 'suresh',   // * here we can mention the the value 
+    writable : true,    // * for giving the access for editing the property if it not true means we can't edit that property
+    enumerable : true  // * it is used for that value it allow to show while console.log()
+  })
+
+
+// # Object.defineProperties()
+Object.defineProperties(objectDefine,{
+    age :{
+        configurable : true,
+        value : 21,
+        writable : true,
+        enumerable : true
+    },
+    place : {
+        configurable: true,
+        value : 'Iyyanoor',
+        writable : true,
+        enumerable : true
+    }    
+})

@@ -334,7 +334,7 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 
 // # Event pubbling
 
-    If we call the child it will triger their parant it called event pubbling for example we have 3 nested div with event if I call the child after completing that event that parant will call. The event trigger upto the hierorge 
+    If we call the child it will triger their parant it called event pubbling for example we have 3 nested div with event if I call the child after completing that event that parant will call. The event trigger upto the dom hierarchy
 
 // # Event capturing
 
@@ -404,7 +404,6 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     // bind syntex like call and apply, but we can assign to another variable and we can access the function using wiht variable
 
 
-
 // # use strict
 
     // * use strict using the javascript strict mode
@@ -448,12 +447,11 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     // usign Object.freeze we can't add,delete,modified properties
 
 // # Proxy Object
-    A Proxy object in JavaScript is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). It allows you to create an object that intercepts and customizes operations performed on 
+    A Proxy object in JavaScript is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). It allows you to create an object that intercepts and customizes operations performed on.
 
 // # map and set 
 
     Maps, which are ordered collections of key/value pairs, and Sets, which are collections of unique values.
-
 
 // # weekSet 
     
@@ -485,9 +483,15 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 
     Concurrency is about dealing with multiple tasks at the same time but not necessarily executing them simultaneously. It involves managing multiple tasks that make progress within overlapping time periods.
 
-// # concarrency
+// # Parallelism
 
     Parallelism involves executing multiple tasks simultaneously, typically using multiple processors or cores. In JavaScript, parallelism can be achieved using Web Workers or Worker Threads.
 
 // # Regular expression
     What is JavaScript RegExs? A JavaScript RegEx is a sequence of characters that forms a search pattern.
+
+
+// # Object.defineProperty()
+    This is used for defined the property it has three parameter first we should mention Object name , second property name, then we should define that property, in third parameter has four property configurable which is used
+        for allow to access that property and it value boolean, second property we should mention value, here we can mention that value, thired ennumerable, this also is boolean type which is used for it that value show or not, writable used allow to edit
+        that property.

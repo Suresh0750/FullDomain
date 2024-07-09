@@ -125,4 +125,8 @@
 
     // * router-level middleware
 
-        Router-level middleware, on the other hand, is used to process requests for a specific route or set of routes and is registered using the router. use() method.
+        Router-level middleware, on the other hand, is used to process requests for a specific router or set of routes and is registered using the router. use() method.
+
+// # CORS
+
+    
