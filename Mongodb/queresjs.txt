@@ -137,3 +137,17 @@ Rename the filed :
 // #***********************Aggregation***************************
 
 
+db.collectionName.aggregate([
+    {$group:{_id:{name:"$name"}}}
+])
+
+
+// using the group find all some
+
+db.collectionName.aggreaget([
+    {$group:{_id:"",{sum:{$sum:"$age"}}}}    // find the total of age from all document
+])
+
+db.collectionName.aggreaget([
+    {$match:{$gte:{age:20}}}
+])
