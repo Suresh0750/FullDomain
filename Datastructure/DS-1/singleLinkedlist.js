@@ -168,4 +168,7 @@ console.log(sl)
 // sl.removeFromval(19)
 sl.removeFromval(7)
 console.log(JSON.stringify(sl))
+console.log(JSON.stringify(sl.reverse()))
+console.log(JSON.stringify(sl.reverse()))
+
 // sl.reverse()
