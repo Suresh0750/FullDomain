@@ -144,9 +144,24 @@ db.collectionName.aggregate([
 
 // using the group find all some
 
-db.collectionName.aggreaget([
+// * accumlator operator
+
+db.collectionName.aggregate([
     {$group:{_id:"",{sum:{$sum:"$age"}}}}    // find the total of age from all document
 ])
+
+db.collectionName.aggregate([
+    
+])
+
+
+
+
+
+
+
+
+
 
 db.collectionName.aggreaget([
     {$match:{$gte:{age:20}}}
