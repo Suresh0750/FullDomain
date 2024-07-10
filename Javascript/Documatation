@@ -495,3 +495,44 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     This is used for defined the property it has three parameter first we should mention Object name , second property name, then we should define that property, in third parameter has four property configurable which is used
         for allow to access that property and it value boolean, second property we should mention value, here we can mention that value, thired ennumerable, this also is boolean type which is used for it that value show or not, writable used allow to edit
         that property.
+
+
+// # Event flow in js
+
+    Event Flow is the sequence or order in which the particular web page receives the event.
+
+// # design pattern
+
+    JavaScript design patterns are reusable code blocks or sequences that solve common web development problems and challenges.
+
+    In Js three desing pattern is there
+        creational,structural ,behavioral
+
+// # debuggin error
+
+    Debugging in JavaScript refers to the process of identifying and fixing errors or bugs in code.
+
+// # Boolean coercion
+
+    Type Coercion refers to the process of automatic or implicit conversion of values from one data type to another. 
+
+// # Named parameter
+    Named parameters allow functions to be called using parameter names, which can make the code more readable and can help avoid errors, especially when dealing with functions that take many parameters
+
+
+// # Symbol
+
+    Symbol using for create unique value over the Symbol data type we can use same value deferent valus 
+    ex :
+    let x = Symbol('key')
+    let y = Symbol('key')
+
+    console.log(x==y)  // false
+
+// # jit
+
+
+JIT stands for Just-In-Time compilation. It's a runtime optimization technique used in programming languages and environments to improve the execution speed of programs.
+
+
+JIT is used to for our javascript code convert to the machine code at runtiome . 

@@ -158,7 +158,17 @@ let student1 = Object.assign({},obj,collage)   // * { name: 'sunnampu', age: 21,
     // console.log(constructObj)
     
     // console.log(constructObj.sayHello())
+// # prototype inheritance
 
+    let objProto ={
+        name : 'suresh',
+        age :21
+    }
+
+    Object.prototype.place = 'tenkasi'         // * these both are appended in inside of the object we can access from every object
+    Object.prototype.method = function(){
+        console.log(`hello developer I from ${place}`)
+    }
 
 // # IIFE
 
@@ -507,3 +517,32 @@ Object.defineProperties(objectDefine,{
         enumerable : true
     }    
 })
+
+
+// # Named parameter
+
+
+function namedParameter({name,age}){
+        return{
+            name ,
+            age
+        }
+}
+namedParameter({name : 'suresh',age:21})
+
+
+// # Symbol
+
+const uniqueKey1 = Symbol('key');
+const uniqueKey2 = Symbol('key');
+
+const objSym = {
+  [uniqueKey1]: 'value1',
+  [uniqueKey2]: 'value2'
+};
+
+// console.log(objSym)
+// console.log(objSym[uniqueKey1]); // Output: 'value1'
+// console.log(objSym[uniqueKey2]); // Output: 'value2'
+// console.log(uniqueKey1 === uniqueKey2); // Output: false
+// console.log(uniqueKey1,uniqueKey2)

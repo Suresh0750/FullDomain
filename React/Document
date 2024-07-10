@@ -11,4 +11,5 @@
 
 // React supports three mounting lifecycle methods for component classes: componentWillMount() , render() , and componentDidMount() 
 
-// # 
+// # What is a cleanup function?
+    The useEffect cleanup function is called when a component that uses the useEffect hook unmounts. Its job is to tidy up any unintended consequences that might affect the code.
