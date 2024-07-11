@@ -151,18 +151,27 @@ db.collectionName.aggregate([
 ])
 
 db.collectionName.aggregate([
-    
+    {$group:{_id:"",min:{$min:"$age"}}}  // find min value from this document
+])
+
+db.collectionName.aggregate([
+    {$group:{_id:"",max:{$max:"$max"}}}
+])
+
+db.collectionName.aggregate([
+    {$group:{_id:"",avg:{$avg:"$avg"}}}
+])
+
+// # match the value 
+db.collectionName.aggreaget([
+    {$match:{$gte:{age:20}}}
 ])
 
 
 
-
-
-
-
-
-
-
-db.collectionName.aggreaget([
-    {$match:{$gte:{age:20}}}
+// # match use with limit
+db.practice.aggregate([
+  {$match:{age:{$gte:35}}},
+  {$group:{_id:{age:"$age"}}},
+  {$limit:2}
 ])
