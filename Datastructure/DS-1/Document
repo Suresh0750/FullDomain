@@ -1,0 +1,25 @@
+Data structure :
+    A data structure is a specialized format for organizing, processing, retrieving and storing data. There are several basic and advanced types of data structures, all designed to arrange data to suit a specific purpose.
+
+asymptotic analysis :
+    Asymptotic analysis is a mathematical technique used for understanding the behavior of algorithms as their input increases:
+
+Big O :
+    Big O notation is a mathematical notation used to describe the asymptotic behavior of a function as its input grows infinitely large. It provides a way to characterize the efficiency of algorithms and data structures. 
+
+memory leaks :
+    A memory leak occurs when programmers create a memory in a heap and forget to delete it. The consequence of the memory leak is that it reduces the performance of the computer by reducing the amount of available memory.
+
+linear and non-linear :
+
+    In this structure, the elements are arranged sequentially or linearly and attached to one another. In this structure, the elements are arranged hierarchically or non-linear manner. Arrays, linked list, stack, queue are the types of a linear data structure. Trees and graphs are the types of a non-linear data structure.
+
+linked list :
+    A linked list is a data structure that stores a sequence of elements. Each element in the list is called a node, and each node has a reference to the next node in the list. The first node in the list is called the head, and the last node in the list is called the tail.
+
+What Are the Types of Linked Lists?
+    Singly linked lists.
+    Doubly linked lists.
+    Circular linked lists.
+    Circular doubly linked lists.
+
