@@ -1,7 +1,7 @@
 
 
 
-// # with extra sapce
+// # with extra space
 
 function quickSort(arr){
 
@@ -25,4 +25,8 @@ function quickSort(arr){
 }
 
 
-console.log(quickSort([1,3,4,2,4,5,6,5,3,5,7,8,9,8]))
+// console.log(quickSort([1,3,4,2,4,5,6,5,3,5,7,8,9,8]))
+
+
+
+// # quick sort without space
