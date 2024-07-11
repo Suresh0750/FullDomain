@@ -320,6 +320,8 @@ objOptional?.collage?.machanic?.sub
 // console.log(objOptional?.collage?.machanic?.sub)
 
 
+// NullIs operator
+
 let checkNull = null ?? 'this is check null is operator'
 
 // console.log(checkNull)
@@ -546,3 +548,32 @@ const objSym = {
 // console.log(objSym[uniqueKey2]); // Output: 'value2'
 // console.log(uniqueKey1 === uniqueKey2); // Output: false
 // console.log(uniqueKey1,uniqueKey2)
+
+
+// # weakSet()
+
+
+const weakSet = new WeakSet()
+
+const obj1Weak = {
+    name :'suresh',
+    age :21
+}
+
+const obj2Weak = {
+    name : 'pranav',
+    age : 21
+}
+
+weakSet.add(obj1Weak)
+weakSet.add(obj2Weak)
+
+// console.log(weakSet.has(obj1Weak))
+
+
+// # weakMap()
+
+const weakMap = new WeakMap()
+
+
+

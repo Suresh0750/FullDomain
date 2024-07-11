@@ -222,7 +222,7 @@ promise methods :
 // # web API
 
     A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server.
-    // * Here we use callback queue and event loop
+    // * Here we use callback queue and event loop. 
     
 // # shallow copy 
 
@@ -272,6 +272,7 @@ promise methods :
     Optional chaining is a feature in JavaScript that allows you to safely access deeply nested properties of an object without having to explicitly check if each reference in the chain is null or undefined. This feature helps to avoid errors and makes the code cleaner and more readable.
 
 // # Global execution context
+
     Global execution context: This is the execution context for the global scope. It is created when the JavaScript engine starts up. Function execution context: This is the execution context for a function. It is created when the function is called
 
 
