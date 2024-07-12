@@ -27,3 +27,6 @@ server.listen(3000,()=>{
     //     next();
     //   });
 
+setImmediate(()=>{
+    console.log('SetImmediate function is start')
+})

@@ -129,4 +129,135 @@
 
 // # CORS
 
+    CROSS origin resources sharing
+    What is Cross-Origin Resource Sharing? Cross-origin resource sharing (CORS) is a mechanism for integrating applications. CORS defines a way for client web applications that are loaded in one domain to interact with resources in a different domain.
+
+    it is used to allow requesed fetch the data from one domain to another domain.
+
+
+// # http option method
+
+    // we use option method in CORS . Before fectching the data we would give the dummy request is called preflight in this quest we will send to the opetion method.
+
+    this option method is happend automatically . when we fectch the data from one domain to another domain our brower will send to preflight request to another domain in this it mention all datails like why we give that request contant-type evrything.
+
+// # preflight method
+
+    A preflight request is a small request that is sent by the browser before the actual request. It contains information like which HTTP method is used, as well as if any custom HTTP headers are present. The preflight gives the server a chance to examine what the actual request will look like before it's made.
+
+// # allow access Controler
+
+    // * we set some information in header for which kind of came requesed for that request which kindof responced we will send.
+    Which request it wil send the responce according to the headers details . if the request success means it will send 200 fail means it will send 404.
+
+// # same origin policy.
+
+    Same origin policy is a security mechanism that restricts a resource that is loaded in one particular origin from another origin. This means that an origin cannot access the content from some other origin. This also prevents any kind of suspicious activities that are happening indirectly through a particular origin
+
+// # CSRF
+
+    Cross-Site Request Forgery (CSRF, or Session Riding) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.
+
+// # REST API 
+
+    Representational State Transfer Application Programming Interface. 
+    REST APIs facilitate easy, adaptable integrations; RESTful APIs provide scalable solutions for complex business data systems.
+
+    it will send the response video ,audio,file ,html format according to that request.
+
+// # modules
+
+     These modules form part of the building blocks of the application. They help developers work faster and write more structured code.
+
+// # buildin modules 
+
+    Node.js comes with several built-in modules that provide essential functionality for building applications
+
+    example : http,path,os,fs,url,queryString
+
+// # fs module
+
+    The fs (File System) module in Node.js provides functions to interact with the file system, including reading, writing, updating, and deleting files.
+
+// # fs.stat
+
+    The fs.stat method in Node.js is used to retrieve the status of a file or directory. It returns an instance of fs.Stats, which contains various properties and methods that provide detailed information about the file or directory.
+
+// #  req.query
+    req.query is used to capture query parameters from the URL. Query parameters are typically used to filter or sort data and are appended to the URL after a question mark (?).
+
+// # req.params
+
+    req.params: Used to capture values from named segments in the route URL.
+
+// # Concurrency
+
+    Concurrency in Node.js refers to the ability to handle multiple operations at the same time. Node.js is built on the V8 JavaScript engine and uses an event-driven, non-blocking I/O model, which makes it efficient and suitable for handling concurrent operations.
+
+// # event driven architecture
+
+    An event-driven architecture (EDA) is an integration model built to publish, capture, process, and respond to events across distributed systems in real time. When an event occurs in one application, a message is automatically sent to all the other applications that need to know about it, so they can act on it in turn.
+
+// # Advantages of Node js
+
+    scalable web app development .
+    Hight performance
+    Powerful Data Processing
+    Easy to Learn and Quick to Adapt
+    Lesser Loading Time.
+
+// # app local
+
+    store local variable
+     
+     hold the data and shold be  accessable an all template middleware
+
+
+// # events - emit, on
+
+    In Node.js, the events module provides the EventEmitter class, which is a key part of the event-driven architecture. The EventEmitter allows objects to communicate asynchronously by emitting events and listening for those events. This pattern is particularly useful for handling I/O operations, user interactions, and other asynchronous tasks.
     
+
+// # Node js Advantages
+
+    asynchronous and Event driven
+    High performance
+    single Programming language
+    non-blocking I/O
+    cross origin
+    realtime applicatio
+    Rapid developement
+    Json support
+
+// # setImmediate 
+
+    setImmediate() is a function in Node.js that schedules a callback to be executed immediately after the current event loop phase completes.
+
+// # Event loop
+
+
+The event loop is a core concept in Node.js that enables non-blocking, asynchronous programming. It allows Node.js to perform I/O operations, such as reading files and making network requests, without blocking the main execution thread. 
+
+Timers: Executes callbacks scheduled by setTimeout and setInterval.
+Pending Callbacks: Executes I/O callbacks deferred to the next iteration of the event loop.
+Idle, Prepare: Used internally by Node.js. Not typically relevant for user code.
+Poll: Retrieves new I/O events; executes I/O-related callbacks (excluding timers and setImmediate).
+Check: Executes callbacks scheduled by setImmediate.
+Close Callbacks: Executes callbacks related to closing events, such as socket.on('close', ...).
+
+
+// * small Indro of  Event queue, Macro-task queue, Micro-task, Event loop phases
+
+    Event Queue: Manages the execution of callbacks and tasks after asynchronous operations complete.
+    Macro-task Queue: Handles tasks such as setTimeout, setInterval, and I/O operations.
+    Micro-task Queue: Handles tasks such as resolved Promises and process.nextTick() callbacks.
+    Event Loop Phases: The event loop processes different types of queues in phases, including timers, pending callbacks, poll, check, and close callbacks.
+
+
+// # process.nextTick()
+    process.nextTick() is a method in Node.js that allows you to schedule a callback function to be invoked in the next iteration of the event loop, before any I/O or timer events.
+
+// # timer functions
+
+    setTimeout
+    setInterval

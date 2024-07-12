@@ -3,7 +3,7 @@
 
 const fs = require('fs')
 
-const path = 'info.txt'
+const path = 'Node js/info.txt'
 
 fs.writeFile(path,'hello world pranav',(err,data)=>{
  
@@ -36,5 +36,13 @@ fs.unlink('delete.txt',(err,data)=>{  // evey think is working
         console.log(`unlink ${err}`)
     }else{
         console.log(`unlink ${data}`)
+    }
+})
+
+fs.stat(path,"Documentation.txt",(err,data)=>{
+    if(err){
+        console.log('stat\n',err)
+    }else{
+        console.log('statS\n',data)
     }
 })
