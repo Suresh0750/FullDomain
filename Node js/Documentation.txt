@@ -261,3 +261,85 @@ Close Callbacks: Executes callbacks related to closing events, such as socket.on
 
     setTimeout
     setInterval
+
+// # stream& buffer & chunk
+
+    // * read the data and write the data is called stream.
+
+    ex : file handling . when user upload any file or image or large amount of data it will came partial partial that means data split format 
+
+    // * the partial data come and store memory chunk  this data is showing the buffer format . so the data will store into the buffor memory.
+
+// # pipe 
+
+    // pipe used to do same time readable stream and writalbe stream.
+
+
+// # morgan
+
+    morgan log module it would use our developement phase. using morgan module we can chack our request is came to server or not.
+
+// # helmet
+
+    helmet is a third-party module in Node.js designed to help secure Express applications by setting various HTTP headers.
+
+// # express.json
+ 
+    express.json is used in the middleware for parsing the data to json format. if we not express.josn we should get the data req.on('data'(chunk)=>{}),req.end(()=>{})
+
+    express.urlendcode is using for convert the data decode format to encode format.
+
+// # app.use()
+
+    The app.use() method is used to mount middleware functions at the specified path. Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle
+
+// # app.set()
+
+    The app.set() method is used to set application-level settings, which are essentially key-value pairs. These settings can be used to configure various aspects of the Express application.
+
+// # writehead vs setHead
+
+    writeHead we should mention  content-type and status but  setHead we don't want to mention that.
+    using the writeHead we should call the res.end() for end the request but setHead we don't mention that.
+
+// # cluster
+
+    Clustering in Node.js is a technique used to take advantage of multi-core systems by creating child processes (workers) that share the same server port. The cluster module allows you to create a simple way to scale your application across multiple CPU cores.
+
+
+// # npm 
+
+    npm is node packages manager
+    it is used to manage all packages and dependencies.
+
+// # npm init & package.json()
+    npm init is a command used to create a new package.json file for your project. The package.json file holds metadata about the project and its dependencies, scripts, and other configurations.
+
+// # package-lock.json
+
+    it's contains about subpackage details.
+
+// # npx
+    npx is a tool for executing packages directly from the npm registry, useful for running one-off commands and avoiding global installs.
+
+// # npm vs yarn
+
+    both are used to manage our package compare to npm yarn is robust security performance.
+
+// # Scaffolding
+    Scaffolding in Node.js refers to the process of generating the basic structure or boilerplate code for an application or a part of an application. \
+
+// # MVC
+
+    model view controller which the patter for arranging our project files. it allow to give readable things.
+
+// # interperter vs compiler
+    An interpreter translates high-level programming code into machine code line-by-line and executes it immediately. It does not generate an intermediate machine code file.
+
+// # util
+    The util module in Node.js provides various utility functions that are helpful for developers. These utilities include functions for formatting strings, inspecting objects, inheriting from classes, and more. The util module is part of the Node.js standard library and can be imported and used without installing any additional packages .
+
+
+// zlib
+
+    The zlib module in Node.js provides compression and decompression functionality using the Gzip and Deflate/Inflate algorithms.
