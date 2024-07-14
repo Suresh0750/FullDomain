@@ -14,4 +14,56 @@
     db.createCollection("collectionName",{capped:true,size:56112,max:100,autoIndexId:true})
 
         // * here size is mention the size in bit format and max is denoted how many document should be allow and autoIndexId is true means we can't add _id manually it's created automatically, but using false we can add manually _id and if we not add manually id created automatically.
+        // we can use 16 MB
+// # aggregation 
+
+    aggregation is a freamwork, is used to write complex query in easy way.
+
+// # transation 
+
+    transation provide a way to execute multiple operations as a single atomic unit of work.
+
+// # single purpose application
+
+    single purpose application is efficient way to access the accross the document .
+
+    example : count , distinct, group
+
+
+// # indexing
+
+An index in MongoDB is a data structure that improves the speed of data retrieval operations on a collection by providing a quick access path to the data based on the indexed fields. 
+
+db.collection.createIndex({fileName: 1})
+
+
+// # impact on indexing
+    increased storage Sapce
+    impact on write performance
+
+
+// # gridfs how it works
+
+    GridFS is a specification used in MongoDB for storing and retrieving large files such as images, videos, audio files, and other binary data. It's particularly useful when the size of these files exceeds MongoDB's BSON document size limit (currently 16 MB). Here's how GridFS works and its key components:
+
+// # journaling 
+
+    journaling in mongodb is critical feature that ensure data durability and reliability in the face of system failure. is keep the copy of eveything.
+
+
+// # sharding in mongodb
+
+    Sharding in MongoDB is a powerful mechanism for achieving horizontal scalability and managing large datasets. By distributing data across multiple shards based on a shard key, MongoDB can handle massive amounts of data and high query loads effectively, making it suitable for applications requiring robust scalability and performance. However, setting up and managing a sharded cluster requires careful planning and ongoing maintenance to ensure optimal performance and reliability.
+
+// # harizontal scaling
+    // * for undersdating 
+    it will create multiple cpu AND STORE data using shard key.
+
+// # vertical scalling
+    it is treaditional scalling. it will store the data vertically.
+
+// # replication 
+    In simple terms, MongoDB replication is the process of creating a copy of the same data set in more than one MongoDB server. 
+
+// # relational vs non relational 
     
