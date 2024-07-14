@@ -66,4 +66,103 @@ db.collection.createIndex({fileName: 1})
     In simple terms, MongoDB replication is the process of creating a copy of the same data set in more than one MongoDB server. 
 
 // # relational vs non relational 
-    
+    relational database is every data store inside of the table . non relational database store the data in side document or graph , 
+    reational database table with row and column based , non relational database store key and value paire.
+    relational database used ACID property AND non  relational used cap theoram. 
+
+// # sql vs nosql
+
+    sql is relational database nosql is non relational database.
+    sql vertical scalability and nosql horizontal scalability
+    sql store the data row and collumn and nosql key value pair
+    sql is using ACID property and nosql is CAP theoram.
+
+// # upsert true 
+
+    using upsert true if the value is not also the document will create.
+
+    db.collentionName.updateOne({name:'suresh'},{$set:{age:21},{upsert:true}})
+
+
+
+// # cap theoram 
+
+    consitstancy
+    availability
+    porticial tolarance
+
+// replica set
+    A replica set in MongoDB is a group of mongod processes that maintain the same data set. 
+
+    original data is present in primary node. there are many secondary node is there if the primary node is damage means at tat side election will happens which is conducted by Heartbeat node
+
+// # oplog 
+
+The oplog (operations log) is a special capped collection that keeps a rolling record of all operations that modify the data stored in your databases.
+
+
+// # how to improve performance in mongodb
+
+    using createIndex 
+
+// # TTL index
+    TTL is time to live
+
+    A TTL (Time-To-Live) index in MongoDB is a special type of index that automatically removes documents from a collection after a specified period of time.
+
+// # Pipeline
+
+    Aggregation pipelines can have one or more "stages".
+
+// # Query operator
+
+
+    $and, $or, $nor , $not
+
+// # shard components
+
+    shard key: userId
+    shards:
+    confing servers:
+    Mongos;
+
+// # storage engine in mongodb
+
+    WiredTiger is the default storage engine
+
+// # type coercion
+
+    In MongoDB, type coercion refers to the implicit or explicit conversion of values from one data type to another within queries or operations. 
+
+
+// # acid properties
+
+    Atomicity   // * all the action in a transactions is treated as a single unite of work.
+    concistancy  // * Consistency means that any changes made to a database must adhere to the database’s existing constraints, otherwise the whole transaction will fail.
+    Isolation  // *  If two transactions are executed simultaneously, the isolation rule guarantees the end result will be the same as if they were executed one after another.
+    durability // * Durability guarantees that as soon as the transaction succeeds, the client can be sure the data has been properly persisted. Even something like hardware failure or a power interruption won’t void the transaction.
+
+// # namespaces
+
+    namespaces means collection name and database name both are same.
+
+// # accumulative operator
+
+    $min, $max, $avg
+
+// # regex
+
+    // * for my understanding
+    regex is a sqeuence of the charactor that form the patterm 
+
+// # why BSON is faster
+BSON's binary structure encodes type and length information, which allows it to be traversed much more quickly compared to JSON.
+
+
+// # clustered collection
+A clustered collection is a MongoDB collection that stores documents in a sorted order based on the value of the clustered index key. Collections created with a clustered index are called clustered collections. 
+
+// # primary ,secondary key index
+The primary index is automatically created in the database when the table is activated.
+
+Generally secondary indexes point to the primary key of the record instead of the ultimate data locatio

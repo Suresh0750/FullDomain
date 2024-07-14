@@ -68,7 +68,14 @@ delete :
 
 Rename the filed :
 
-    db.collecionName.updateOne({//condition},{$rename:{'oldName':'New name'}});
+    db.collectionName.updateOne({//condition},{$rename:{'oldName':'New name'}});
+
+
+// # $expr
+
+    is used to match to filed
+    
+    db.collectionName.findOne({$expr:{$gte:[$age,"$rollNo"]}})
 
 
 
@@ -132,6 +139,25 @@ Rename the filed :
     db.collectionName.updateOne({},{$pull:{field:'val'}})
     db.collectionName.updateOne({},{$pull:{field:{$in:['val','val']}}})
 
+// # normal projection
+
+    db.collectionName.find({},{name:1,age:1:fieldName:1})
+
+
+// using upsert
+// #     db.collentionName.updateOne({name:'suresh'},{$set:{age:21},{upsert:true}})
+
+
+
+// # $in and $all   used in find
+    db.collectionName.find({field:{$in:['value','value']}})  //* if one value is there also we it will work is working like or operator
+    db.collectionName.find({field: {$all:['value','value']}})  // * is working like a and operator
+
+
+// # regex patter for filter the value
+    
+    db.collectionName.find({fieldName:{$regex:/^letter/}})
+    db.collectionName.find({fieldName;{$regex:/^letter/,$options:"i}})  // * options is used for case sencitvie it will check uppercase and lowecase
 
 
 // #***********************Aggregation***************************
@@ -155,7 +181,7 @@ db.collectionName.aggregate([
 ])
 
 db.collectionName.aggregate([
-    {$group:{_id:"",max:{$max:"$max"}}}
+    {$group:{_id:"",max:{$max:"$age"}}}
 ])
 
 db.collectionName.aggregate([
@@ -175,3 +201,77 @@ db.practice.aggregate([
   {$group:{_id:{age:"$age"}}},
   {$limit:2}
 ])
+
+
+
+// # join 2 collection
+
+    using lookup 
+
+// # $unwind  it used for give in seperate document giving the seperate collecionName based on the array . the document will created based on each element for inside of the array.
+
+example : 
+    {
+    "_id" : ObjectId("456187864hfh5421h510"),
+    "name" : "Mikky",
+    "age" : 31,
+    "phone_no" : 8654793212
+    "company" : "javatpoint",
+    "skills" : [ 
+        "C", 
+        "C++",
+        "PHP", 
+        "Java", 
+        ".Net"
+    ]
+}
+
+output : 
+    {
+    "_id" : ObjectId("456187864hfh5421h510"),
+    "name" : "Mikky",
+    "age" : 31,
+    "phone_no" : 8654793212
+    "company" : "javatpoint",
+    "skills" : "c"
+}{
+    "_id" : ObjectId("456187864hfh5421h510"),
+    "name" : "Mikky",
+    "age" : 31,
+    "phone_no" : 8654793212
+    "company" : "javatpoint",
+    "skills" : "c++"
+}{
+    "_id" : ObjectId("456187864hfh5421h510"),
+    "name" : "Mikky",
+    "age" : 31,
+    "phone_no" : 8654793212
+    "company" : "javatpoint",
+    "skills" : "PHP"
+}{
+    "_id" : ObjectId("456187864hfh5421h510"),
+    "name" : "Mikky",
+    "age" : 31,
+    "phone_no" : 8654793212
+    "company" : "javatpoint",
+    "skills" :"Java"
+}
+
+
+// # db.collectionName.aggregate([
+    {$project:{
+        fileName :1,                    // in project if you mention any field the filed it's fileder
+        fildName :1
+    }},
+    {$unwind: "$fildName" // but should be array}  
+])
+
+
+// * example
+    db.practice.aggregate([
+        {
+                    $match:{name:{$regex:/^M/,$options:"i"}},
+        
+            }, {$group:{_id:"",sum:{$sum:"$age"}}}
+        ])
+
