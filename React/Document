@@ -13,3 +13,72 @@
 
 // # What is a cleanup function?
     The useEffect cleanup function is called when a component that uses the useEffect hook unmounts. Its job is to tidy up any unintended consequences that might affect the code.
+
+// # Why we use a cleanup function?
+
+
+
+// built in component
+
+    suspense
+    fragement
+    strictmode
+    profiller    // profiller we can measure rendering performance
+
+//  control component and unControl component
+
+    In React, Controlled components refer to the components where the state and behaviors are controlled by Parent components while Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves.
+
+// lifecycle methods 
+
+    componentDidMount
+    componentDIDUpadate
+    componentWillmount
+
+
+// # Why do we use key prop?
+    The key prop is a unique identifier that React uses to efficiently manage and update elements within a list.
+
+// # How do we avoid all the components being loaded in the 1st render?
+
+    Using React.lazy we can avoid being loaded in the 1 st render.
+    
+// # higher order component in react js
+
+    In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component.
+
+// # Relation between memo and useMemo ?
+
+    The are two memo is ther useMemo and Reactmemo . useMemo is used for memoized value and react memo used for momoized component.
+
+// # Error boundories
+
+    Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed
+
+// # What are controlled and uncontrolled components?
+
+    constrolled components is state and behaviour is contolled by their parent component but uncontrolled components is state and behaviour is controlled by themselves.
+
+// # Synthetic events
+
+    Synthetic events in React are objects that wrap native browser events to provide a consistent interface across different browsers. React's synthetic event system is designed to normalize events so that they have the same properties across all browsers, making it easier to write cross-browser compatible code.
+
+// # prop drilling 
+    Prop drilling, also known as "threading props" or "component chaining," refers to the process of passing data from a parent component down to nested child components through props.
+
+
+// # strict Mode
+    The React StrictMode helps to identify and detect various warnings/errors during the development phase, namely… Helps to identify those components having unsafe lifecycles: Some of the legacy component lifecycle methods are considered to be unsafe to use in async applications
+
+
+// Hooks
+https://pastebin.com/9pKzdi9F
+
+// # class and funtion components
+
+    In React, there are two primary ways to create components: function and class components. Each has its own syntax and use cases, although with the introduction of React Hooks, the gap between them has narrowed significantly. But the selection of appropriate component types is still very crucial for building efficient and maintainable React applications.
+
+
+// # forceUpdate()
+
+    The forceUpdate() function in React is a method available on class components that can be used to force a re-render of the component
