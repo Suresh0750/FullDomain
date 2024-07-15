@@ -152,7 +152,7 @@
 
 // # same origin policy.
 
-    Same origin policy is a security mechanism that restricts a resource that is loaded in one particular origin from another origin. This means that an origin cannot access the content from some other origin. This also prevents any kind of suspicious activities that are happening indirectly through a particular origin
+    Same origin policy is a security mechanism that restricts a resource that is loaded in one particular origin from another origin. This means that an origin cannot access the content from some other origin. This also prevents any kind of suspicious activities that are happening indirectly through a particular origin.
 
 // # CSRF
 
@@ -266,9 +266,13 @@ Close Callbacks: Executes callbacks related to closing events, such as socket.on
 
     // * read the data and write the data is called stream.
 
-    ex : file handling . when user upload any file or image or large amount of data it will came partial partial that means data split format 
+    ex : file handling . when user upload any file or image or large amount of data it will came partial partial that means data split format .
 
     // * the partial data come and store memory chunk  this data is showing the buffer format . so the data will store into the buffor memory.
+
+// # eventqueue
+
+    Event Queue: The event queue holds various types of events, such as callbacks, timers, and I/O events, that are generated as a result of asynchronous operations.
 
 // # pipe 
 
@@ -343,3 +347,27 @@ Close Callbacks: Executes callbacks related to closing events, such as socket.on
 // zlib
 
     The zlib module in Node.js provides compression and decompression functionality using the Gzip and Deflate/Inflate algorithms.
+
+// # REPL
+
+    Node. js REPL (Read-Eval-Print Loop) is an interactive shell that allows you to run JavaScript code directly in a Node. js environment. 
+// # alternative for express
+
+    nest js
+
+// # error first callback
+
+    it's used to catch the error which use if fs.read and write .
+
+
+// # server commmunication
+
+    sever communication is server commutnicate to the another server for accessing data from one server to another server.
+
+// # secure flage
+
+    The Secure attribute is meant to protect against man-in-the-middle (MITM) attacks.
+
+// # libuv
+
+    Libuv provides non-blocking I/O operations, allowing Node. js to handle multiple tasks concurrently without waiting for an operation to complete.
