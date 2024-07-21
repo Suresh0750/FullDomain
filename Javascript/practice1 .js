@@ -577,3 +577,16 @@ const weakMap = new WeakMap()
 
 
 
+// # generator funtion
+
+
+function* genFun(a){
+    
+    while(true){
+        yield (Math.pow(a,(a++)+1))
+    }
+}
+
+let gen = genFun(2)
+
+console.log(gen.next().value)

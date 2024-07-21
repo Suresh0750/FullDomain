@@ -165,4 +165,7 @@ A clustered collection is a MongoDB collection that stores documents in a sorted
 // # primary ,secondary key index
 The primary index is automatically created in the database when the table is activated.
 
-Generally secondary indexes point to the primary key of the record instead of the ultimate data locatio
+Generally secondary indexes point to the primary key of the record instead of the ultimate data location
+
+// # schema less database
+    As a NoSQL database, MongoDB is considered schemaless because it does not require a rigid, pre-defined schema like a relational database

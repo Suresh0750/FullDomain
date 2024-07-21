@@ -157,7 +157,7 @@ Rename the filed :
 // # regex patter for filter the value
     
     db.collectionName.find({fieldName:{$regex:/^letter/}})
-    db.collectionName.find({fieldName;{$regex:/^letter/,$options:"i}})  // * options is used for case sencitvie it will check uppercase and lowecase
+    db.collectionName.find({fieldName:{$regex:/^letter/,$options:"i}})  // * options is used for case sencitvie it will check uppercase and lowecase
 
 
 // #***********************Aggregation***************************
@@ -275,3 +275,24 @@ output :
             }, {$group:{_id:"",sum:{$sum:"$age"}}}
         ])
 
+
+
+
+
+
+//****************using new practice query*************
+
+// * using distinct with regex
+
+    db.collectionName.distinct("filedName",{"fieldName:{$regex:/^choseLetter/,$options:"i"}})  //* here "i" is denoting case sencitvie
+
+// * $in 
+    in is working like or operator if we need a document which is should be a one deparment or should be anothor deparment
+
+    db.collectionName.find({fildName:{$in:['HR','Finance']}})   // * it will return a document which has HR or Finance only
+
+// * $nin
+
+    nin operator is used to Not operator 
+
+    db.collectionName.find({fieldName:{$nin:['HR','Finance]}})

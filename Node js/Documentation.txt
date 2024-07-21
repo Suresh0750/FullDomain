@@ -351,6 +351,7 @@ Close Callbacks: Executes callbacks related to closing events, such as socket.on
 // # REPL
 
     Node. js REPL (Read-Eval-Print Loop) is an interactive shell that allows you to run JavaScript code directly in a Node. js environment. 
+    
 // # alternative for express
 
     nest js
@@ -371,3 +372,8 @@ Close Callbacks: Executes callbacks related to closing events, such as socket.on
 // # libuv
 
     Libuv provides non-blocking I/O operations, allowing Node. js to handle multiple tasks concurrently without waiting for an operation to complete.
+
+
+// # exit codes in node js
+
+    In computing, the exit status, or exit code, of a terminated process is an integer number that is made available to its parent process (or caller). In DOS, this may be referred to as an errorlevel.

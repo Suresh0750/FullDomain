@@ -77,6 +77,8 @@ Javascript statically typed or a dynamically typed language?
 what is Dom?
 
     Dom stands for Document object Model, serving as a programming interface for web documents.
+    (or)
+    The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
 
 what is BOM?
 
@@ -164,7 +166,6 @@ pure function, impure function :
 
     An Immediately Invoked Function Expression (IIFE) is a function that is defined and executed immediately after its creation. It is often used to create a local scope to avoid polluting the global namespace, which can help prevent variable name conflicts in your code.
 
-
 // # regular function VS Arrow function 
 
     regular function and Arrow function has some difference between syntax and usage . In side of object if we use regular function we can access the value form their lexical scop but Arrow function we can't do.
@@ -217,7 +218,6 @@ promise methods :
 // # async and await 
 
     Async/await provides a powerful way to write asynchronous code in a more synchronous fashion, improving readability, error handling, and overall code structure. It helps avoid callback hell and makes managing multiple asynchronous operations more straightforward.
-
 
 // # web API
 
@@ -286,7 +286,7 @@ promise methods :
 
 // # Nullish operator
 
-The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+    The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 
 // # Bitwise operator
     JavaScript converts numbers to 32 bits signed integers.
@@ -332,7 +332,6 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
         mouseup,
         mouseDown,
 
-
 // # Event pubbling
 
     If we call the child it will triger their parant it called event pubbling for example we have 3 nested div with event if I call the child after completing that event that parant will call. The event trigger upto the dom hierarchy
@@ -350,7 +349,6 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
     Event delegation is a technique in JavaScript where we delegate the responsibility of handling an event to a parent element. 
 
     // * if we click the child the event is triger the parent that is event bubbling so that event we delegate or give a responsibility or work do somthing is call event delegation.  // * for understanding
-
 
 // # Array method
     // Array.from()  // * IS working like split method
@@ -396,14 +394,11 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 
 // # call, apply, bind
     // # call
-
     // using call method we can borrow the function from function or inside of the object function
     // * apply
-    // apply and call usage both are same but has some different, when call the function we should pass the valud should be array format
-
+    // apply and call usage both are same but has some different, when call the function we should pass the value should be array format
     // * bind
-    // bind syntex like call and apply, but we can assign to another variable and we can access the function using wiht variable
-
+    // bind syntex like call and apply, but we can assign to another variable and we can access the function using with variable
 
 // # use strict
 
@@ -474,7 +469,6 @@ The nullish coalescing (??) operator is a logical operator that returns its righ
 
     Polyfills are pieces of code that provide modern functionality to older browsers that lack native support for those features. They bridge the gap between the JavaScript language features and APIs that are available in modern browsers and the limited capabilities of older browser versions.
 
-
 // # jagged array
 
     jagged array is also called ragged array . if the nested array dosn't have same length that called jagged array.
@@ -537,3 +531,4 @@ JIT stands for Just-In-Time compilation. It's a runtime optimization technique u
 
 
 JIT is used to for our javascript code convert to the machine code at runtiome . 
+ 

@@ -16,11 +16,15 @@
 
 // # Why we use a cleanup function?
 
+    Its job is to tidy up any unintended consequences that might affect the code.
 
+// # What are the limitations of react? (SEO, initial load)
 
+    React is most popular library for build the user interface. But there some limitation which means SEO, and initial load, rerentering.
 // built in component
 
     suspense
+    error boundaries
     fragement
     strictmode
     profiller    // profiller we can measure rendering performance
@@ -53,7 +57,7 @@
 
 // # Error boundories
 
-    Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed
+    Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
 
 // # What are controlled and uncontrolled components?
 
@@ -81,4 +85,154 @@ https://pastebin.com/9pKzdi9F
 
 // # forceUpdate()
 
-    The forceUpdate() function in React is a method available on class components that can be used to force a re-render of the component
+    The forceUpdate() function in React is a method available on class components that can be used to force a re-render of the component.
+
+
+// # core concepts of redux
+
+    action, reducer, store
+
+
+// # - life cycle methods vs useEffect
+
+    mounding -
+    updatating
+    unmounding
+
+// # pointer events
+
+    In React, pointer events are a way to handle input events from a variety of input devices, such as a mouse, pen, or touchscreen.
+    onPointerDown
+    onPointerUp
+    onPointerMove
+    onPointerOver
+    onPointerEnter
+    onPointerLeave
+    onPointerOut
+    onPointerCancel
+
+// # super() and super(props)
+
+    In React, super() and super(props) are used within class components to interact with the parent class, typically React.Component. They play a critical role in initializing state and setting up the component’s properties.
+
+
+// # replaceSet()
+
+    The replaceState() method of the History interface modifies the current history entry, replacing it with the state object and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
+
+
+// # props 
+    Props is a special keyword in React that stands for properties and is used for passing data from one component to another.
+
+// # useContext
+
+    useContext is used to avoid the propdrilling method and using the use component we can share the values between the components.
+
+Component:
+    A component is a section of reusable jsx code.
+    It is a HTML like code that can have javascript.
+ 
+Fragment <></> : Let's you to wrap the group the elements
+ 
+Adding CSS: External, Inline, Module.
+ 
+React Hooks: 
+    React hooks are special functions in react which allows functional components to use React features without writing class components
+    (useState, useEffect, useContext, useReducer, useReducer, useCallback, and more..)
+ 
+updater Functions
+ 
+DOM:    
+    DOM represents the current state of the HTML webpage in a tree-like DS.
+    Any changes made to the DOM is directly reflected in the webpage.
+ 
+Virtual DOM :
+    VDOM is an abstraction of actual DOM.
+    It is typically used in front-end libraries like react.
+    It is a lighweight copy of the actual DOM stored in memory as a javascript object.
+    Changes to the virtual DOM are made faster because they don't directly affect the browser's rendering engine.
+    When changes are made to the virtual DOM, the library or framework can efficiently calculate the minimal set of changes needed to update the actual DOM, reducing performance overhead.
+ 
+Single Page Application vs Multipage Applications:
+    SPA: The application which loads the HTML, CSS & JS once and all the other changes are done by DOM or any front-end libraries.
+    MPA: In MPA, the new pages are rendered from the server side technologies like Node, Django, Springboot etc.
+ 
+SSR, CSR:
+    CSR: In CSR, the web page is rendered once and the changes are done by the client side by using DOM or any front-end libraries.
+    SSR: In SSR, the web server generates the complete HTML for each page and sends it to the browser when the user requests a page.
+ 
+Concept of reusability:
+    Reusability is the ability to use the same set of codes without repeating it several times.
+    In react, the concept of reusability means using of the same components in the same or multiple web applications.
+ 
+JSX : 
+    JSX stands for Javascript XML. It is a extension syntax for javascript.
+    It helps us to write HTML-like code within javascript.
+    Expressions and functions can be written in a JSX while the functions returns a single HTML fragment.
+ 
+JSX vs HTML:
+    JSX is a syntax extension for JavaScript, while HTML is a markup language
+    JSX allows you to include expressions and functions within the syntax, while HTML only allows for static text.
+ 
+React Components:
+    Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+ 
+Class (basic- lifecycle methods):
+    A component undergoes into different phases in a lifecycle. React allows us to overwrite particular stages.
+    The Mounting Phase begins when a component is first created and inserted into the DOM. 
+    The Updating Phase occurs when a component's state or props change.
+    And the Unmounting Phase occurs when a component is removed from the DOM.
+ 
+Functional Components:
+    Functional components are one way to create react components.
+    It accepts props as an argument and returns a single fragment of react elements.
+ 
+Dynamic rendering:
+    Dynamic rendering is the process of rendering components based on current state of the application.
+    Conditional rendering- rendering components based on conditions, Loops and State management are the examples of dynamic rendering.
+ 
+useState():
+    useState is a React Hook used to manage state within functional components.
+    React hook used to create a stateful variable & a setter function to update its value in virtual DOM. [name, setName]
+ 
+useEffect():
+    useEffect is a React Hook used to manage side effects within functional components.
+    useEffect takes 2 arguments: callback function & array of dependencies [dependencies].
+    The effects doesn't run during every renders, it will re-run only during the state of the dependencies are changed.
+ 
+useRef():
+    useRef is a React Hook used to create mutable reference that persists accross renders of a functional component.
+    {current: ""}
+    Unlike useState(), useRef() doesn't trigger re-renders.
+ 
+Features of ES6
+    let, const
+    arrow functions, default parameters, rest and spread operators
+    Class
+    Modules
+    Promises, async await
+    Symbol data type, map& set data structures
+    Array methods: Map, reduce, forEach
+ 
+Props:
+    Props are one of the primary ways of passing data from a parent component to child component.
+ 
+Class based Components vs Function based components:
+    Class based components are created using ES6 classes, have their own state and life cycle methods.
+    Function based components are simple function which accept props and return react elements.
+
+// # transpiler
+
+    transpiler is a tool which is used to converd a JSX code to JS code . React use one of the most transpiler which is babel.
+
+// # reconciler
+
+    In React, a reconciler is an algorithm that helps it compare two DOM trees and get the difference between the two. This helps React determine what it needs to change on the screen.
+
+// # React fiber
+
+    Fiber is a new reconciler algorithm that the React team has culminated over two years of research. It aims to solve many of the problems that came with the original algorithm. So ultimately, React Fiber can be seen as a re-implementation of one of React’s core algorithms.
+
+// # diffing algorithm
+
+    The diffing algorithm's ability to reconcile the virtual DOM with the real DOM using a minimum number of operations makes React so powerful. It ensures that the user interface reflects the latest state in the most efficient way possible, leading to a smooth and responsive experience for the user. 
