@@ -138,7 +138,7 @@ Adding CSS: External, Inline, Module.
  
 React Hooks: 
     React hooks are special functions in react which allows functional components to use React features without writing class components
-    (useState, useEffect, useContext, useReducer, useReducer, useCallback, and more..)
+    (useState, useEffect, useContext, useReducer, useCallback, and more..)
  
 updater Functions
  
@@ -233,6 +233,39 @@ Class based Components vs Function based components:
 
     Fiber is a new reconciler algorithm that the React team has culminated over two years of research. It aims to solve many of the problems that came with the original algorithm. So ultimately, React Fiber can be seen as a re-implementation of one of React’s core algorithms.
 
-// # diffing algorithm
+// # diffing algorithm 
 
     The diffing algorithm's ability to reconcile the virtual DOM with the real DOM using a minimum number of operations makes React so powerful. It ensures that the user interface reflects the latest state in the most efficient way possible, leading to a smooth and responsive experience for the user. 
+
+// # shadow dom
+
+    Shadow DOM is a web standard designed to encapsulate components' structure, style, and behavior, allowing for more modular and reusable code. 
+
+// # context API
+
+    The Context API provides a means to share values like state, functions, or any data across the component tree without passing props down manually at every level. 
+
+
+// # useMemo vs React.memo
+
+    useMemo using for memozied the value and React.memo used to memozied the components.
+
+// # useCallback
+
+    The useCallback hook is a built-in hook in React that lets you memoize a callback function by preventing it from being recreated on every render.
+
+// # code splitting
+
+    Code splitting is a powerful technique for optimizing your React applications. It allows you to split your code into various bundles which can then be loaded on demand or in parallel. 
+
+// # suspense
+
+    React Suspense is a built-in React component that you can use to declaratively render a fallback UI until its children finish loading.
+
+// # Redux
+
+    Redux is the most powerful state management tool in the React. Js library, and it's frequently used by Frontend Engineers to build complex applications. With the help of Redux, we can easily manage the state of our React applications, which helps us to develop and maintain complex applications.
+
+// # limitation of redux
+
+    One of the biggest downsides of using Redux with React is the added complexity. Redux has a learning curve, and it can take some time to understand the concepts and best practices. 
