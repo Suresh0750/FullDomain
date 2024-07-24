@@ -9,8 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    
+    <> 
     <Suspense fallback="Loading lazy...">
       <CountComp />
     </Suspense>

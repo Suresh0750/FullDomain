@@ -5,9 +5,9 @@
     esay to encoding and decoding and read and write
 
     Index Efficiency: BSON allows for efficient indexing and quick retrieval of documents. The binary format allows MongoDB to traverse indexes quickly, speeding up query performance.
+
 // capped true
   
-
     // capped we use for  set the size of the collection and collection has some size for example that collection only we can set 10 document we can't add document if the capped is true
    // means we can add a document but the frent of the document will be delete because the collection have some particular size.
 
@@ -31,11 +31,10 @@
 
 
 // # indexing
-
-An index in MongoDB is a data structure that improves the speed of data retrieval operations on a collection by providing a quick access path to the data based on the indexed fields. 
+ 
+    An index in MongoDB is a data structure that improves the speed of data retrieval operations on a collection by providing a quick access path to the data based on the indexed fields. 
 
 db.collection.createIndex({fileName: 1})
-
 
 // # impact on indexing
     increased storage Sapce
@@ -48,19 +47,24 @@ db.collection.createIndex({fileName: 1})
 
 // # journaling 
 
-    journaling in mongodb is critical feature that ensure data durability and reliability in the face of system failure. is keep the copy of eveything.
-
+    journaling in mongodb is critical feature that ensure data durability and reliability in the face of system failure. is keep the copy of eveything.   
+    (or)
+    Using Journaling is like using a log, the reason being, it creates a write operation log to increase the durability. Journaling is temporary storage, which means it keeps only write operation log as pending in journal directory. Also, the shared view has the data but journal directory has the operations.
 
 // # sharding in mongodb
 
     Sharding in MongoDB is a powerful mechanism for achieving horizontal scalability and managing large datasets. By distributing data across multiple shards based on a shard key, MongoDB can handle massive amounts of data and high query loads effectively, making it suitable for applications requiring robust scalability and performance. However, setting up and managing a sharded cluster requires careful planning and ongoing maintenance to ensure optimal performance and reliability.
 
-// # harizontal scaling
+// # harizontal scaling 
     // * for undersdating 
     it will create multiple cpu AND STORE data using shard key.
 
 // # vertical scalling
     it is treaditional scalling. it will store the data vertically.
+
+// # horizontal scaling and vertical scaling
+
+    Horizontal scaling involves adding additional servers and partitioning the system dataset and load over those servers. Vertical scaling involves expanding the resources used by a single server/replica set.
 
 // # replication 
     In simple terms, MongoDB replication is the process of creating a copy of the same data set in more than one MongoDB server. 
@@ -83,23 +87,29 @@ db.collection.createIndex({fileName: 1})
 
     db.collentionName.updateOne({name:'suresh'},{$set:{age:21},{upsert:true}})
 
-
-
 // # cap theoram 
 
     consitstancy
     availability
     porticial tolarance
 
+    consitstancy
+        if the data is there menas it will come if it not there means give error don't give the unreasonable data.
+        The data should consitstancy in every node and any of the time. 
+    Availability 
+        if the node is issue the the data will available on another node or server.
+    partition Tolarance
+        mongodb handles network partitions by allowing the database to continue operating even if there are temporary network issuses.
 // replica set
     A replica set in MongoDB is a group of mongod processes that maintain the same data set. 
 
-    original data is present in primary node. there are many secondary node is there if the primary node is damage means at tat side election will happens which is conducted by Heartbeat node
+    original data is present in primary node. there are many secondary node is there if the primary node is damage means at that side election will happens which is conducted by Heartbeat node.
 
 // # oplog 
 
-The oplog (operations log) is a special capped collection that keeps a rolling record of all operations that modify the data stored in your databases.
-
+    The oplog (operations log) is a special capped collection that keeps a rolling record of all operations that modify the data stored in your databases.
+    (or)
+    oplog is a mechanisam if the primary node is creashed so heartbeat node select the secondary as primary so the process is oplog (operation log)
 
 // # how to improve performance in mongodb
 
@@ -107,7 +117,6 @@ The oplog (operations log) is a special capped collection that keeps a rolling r
 
 // # TTL index
     TTL is time to live
-
     A TTL (Time-To-Live) index in MongoDB is a special type of index that automatically removes documents from a collection after a specified period of time.
 
 // # Pipeline
@@ -116,8 +125,11 @@ The oplog (operations log) is a special capped collection that keeps a rolling r
 
 // # Query operator
 
-
     $and, $or, $nor , $not
+
+// # size of one document
+
+    The maximum size of the documents is 16 MB.
 
 // # shard components
 
@@ -169,3 +181,39 @@ Generally secondary indexes point to the primary key of the record instead of th
 
 // # schema less database
     As a NoSQL database, MongoDB is considered schemaless because it does not require a rigid, pre-defined schema like a relational database
+
+// # ad-hoc queries
+
+    Ad-hoc queries in MongoDB refer to queries that are not predefined and can be created on-the-fly to meet specific requirements.
+
+// # schema less database;
+
+    Schemaless databases are known as NoSQL databases because data isn't stored in relational tables. Instead, you store data differently, such as key-value pairs, documents, columns, or graph data models. 
+
+
+// # database restore and backup
+
+    Database backup and restore are critical processes for data protection and recovery in database systems.
+
+// # Why BSON is better than JSON?
+
+    BSON's binary-encoded serialization format encodes type and length information as well, which allows it to be traversed much more quickly compared to JSON. 
+
+// #  insert vs save
+
+
+    INSERT is used to insert the document to the database. save is working like shallow copy if we use find method and asign the object then if we insert the property and we use save is update the database is automatically.
+
+// # alies
+
+    In MongoDB, aliases can be used in aggregation pipelines to temporarily rename fields or create new fields with different names for the duration of the pipeline.
+
+
+// # types of indexing
+
+    Single Field index
+    Compound Index
+    Multikey Index
+    Geospatial Index
+    Clustered Index
+    

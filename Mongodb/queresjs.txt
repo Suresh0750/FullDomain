@@ -147,7 +147,10 @@ Rename the filed :
 // using upsert
 // #     db.collentionName.updateOne({name:'suresh'},{$set:{age:21},{upsert:true}})
 
+// # romove the first and last value from array in mongodb
 
+    db.collectionName.updateOne({},{$pop:{fieldName:1}}) // It will remove the element of the last value from the array 
+    db.collectionName.updateMany({},{$pop:{fieldName:-1}})  // it will remove the first value of the array
 
 // # $in and $all   used in find
     db.collectionName.find({field:{$in:['value','value']}})  //* if one value is there also we it will work is working like or operator
@@ -274,7 +277,9 @@ output :
         
             }, {$group:{_id:"",sum:{$sum:"$age"}}}
         ])
-
+// # db.practice.aggregate([
+    $match:{arrayName:{$size:'mentionSize'}}
+])
 
 
 

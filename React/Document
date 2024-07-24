@@ -161,7 +161,7 @@ SSR, CSR:
     CSR: In CSR, the web page is rendered once and the changes are done by the client side by using DOM or any front-end libraries.
     SSR: In SSR, the web server generates the complete HTML for each page and sends it to the browser when the user requests a page.
  
-Concept of reusability:
+Concept of reusability :
     Reusability is the ability to use the same set of codes without repeating it several times.
     In react, the concept of reusability means using of the same components in the same or multiple web applications.
  
@@ -256,7 +256,8 @@ Class based Components vs Function based components:
 
 // # code splitting
 
-    Code splitting is a powerful technique for optimizing your React applications. It allows you to split your code into various bundles which can then be loaded on demand or in parallel. 
+    Code splitting is a powerful technique for optimizing your React applications. It allows you to split your code into various bundles which can then be loaded on demand or in parallel.
+     Ex : React.lazy() 
 
 // # suspense
 
@@ -269,3 +270,25 @@ Class based Components vs Function based components:
 // # limitation of redux
 
     One of the biggest downsides of using Redux with React is the added complexity. Redux has a learning curve, and it can take some time to understand the concepts and best practices. 
+
+// # Difference between actual DOM and virtual DOM
+
+    Real DOM is the actual structure represented in the User Interface while Virtual DOM is the memory representation of the same.
+
+// # Difference between single Page and multi-page application in react js.
+
+     Unlike Single Page Applications (SPAs), which build pages in our browser using JavaScript, MPAs depend on the server to generate and refresh pages.
+
+
+// # Learn about components :
+
+    Components are independent and reusable bits of code.
+
+// # Dynamic rendering
+
+    Dynamic rendering means conditional based component rendering.
+
+// # useReducer 
+
+    useReaducer and useState both are used to manage the state variable using the useReducer we can manage multiple state.
+    
