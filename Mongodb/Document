@@ -168,16 +168,17 @@ db.collection.createIndex({fileName: 1})
     regex is a sqeuence of the charactor that form the patterm 
 
 // # why BSON is faster
-BSON's binary structure encodes type and length information, which allows it to be traversed much more quickly compared to JSON.
+    BSON's binary structure encodes type and length information, which allows it to be traversed much more quickly compared to JSON.
 
 
 // # clustered collection
-A clustered collection is a MongoDB collection that stores documents in a sorted order based on the value of the clustered index key. Collections created with a clustered index are called clustered collections. 
+    A clustered collection is a MongoDB collection that stores documents in a sorted order based on the value of the clustered index key. Collections created with a clustered index are called clustered collections. 
 
-// # primary ,secondary key index
-The primary index is automatically created in the database when the table is activated.
+// # primary ,secondary key index 
 
-Generally secondary indexes point to the primary key of the record instead of the ultimate data location
+    The primary index is automatically created in the database when the table is activated.
+
+    Generally secondary indexes point to the primary key of the record instead of the ultimate data location
 
 // # schema less database
     As a NoSQL database, MongoDB is considered schemaless because it does not require a rigid, pre-defined schema like a relational database
@@ -201,7 +202,6 @@ Generally secondary indexes point to the primary key of the record instead of th
 
 // #  insert vs save
 
-
     INSERT is used to insert the document to the database. save is working like shallow copy if we use find method and asign the object then if we insert the property and we use save is update the database is automatically.
 
 // # alies
@@ -216,4 +216,15 @@ Generally secondary indexes point to the primary key of the record instead of th
     Multikey Index
     Geospatial Index
     Clustered Index
+    
+
+// # view
+    A MongoDB view is a read-only queryable object whose contents are defined by an aggregation pipeline on other collections or views.
+
+// # benefits of mongodb
+
+    Flexible Schema
+    Scalability
+    Performance
+    Rich Query Language
     
