@@ -187,6 +187,7 @@ db.collection.createIndex({fileName: 1})
 
     Ad-hoc queries in MongoDB refer to queries that are not predefined and can be created on-the-fly to meet specific requirements.
 
+    it is constract dynamically at run time.
 // # schema less database;
 
     Schemaless databases are known as NoSQL databases because data isn't stored in relational tables. Instead, you store data differently, such as key-value pairs, documents, columns, or graph data models. 
