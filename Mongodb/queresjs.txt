@@ -282,6 +282,13 @@ output :
 ])
 
 
+// # fins the array which above some length
+db.collection.find({
+  $expr: {
+    $gt: [{ $size: "$arrayField" }, 1]
+  }
+})
+
 
 
 

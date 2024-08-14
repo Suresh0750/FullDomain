@@ -279,7 +279,6 @@ Class based Components vs Function based components:
 
      Unlike Single Page Applications (SPAs), which build pages in our browser using JavaScript, MPAs depend on the server to generate and refresh pages.
 
-
 // # Learn about components :
 
     Components are independent and reusable bits of code.
@@ -292,3 +291,13 @@ Class based Components vs Function based components:
 
     useReaducer and useState both are used to manage the state variable using the useReducer we can manage multiple state.
     
+
+
+// # axios  vs fetch
+
+    axios has intercepter we can modify the response object. prograssing tracking. reqeuset cancelation.
+
+
+// # redux limitation 
+
+        boilare plate code 

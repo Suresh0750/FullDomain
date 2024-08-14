@@ -24,7 +24,7 @@ class trie{
         curr.isWord = true
     }
     find(word){
-        if(!this.root) return undefined
+   
         let curr = this.root
         for(let i=0;i<word.length;i++){
             let currNode = word[i]
@@ -70,8 +70,6 @@ const T = new trie()
 T.insert('kiran')
 console.log(T)
 console.log(T.find('kiran'))
-
 console.log(T.print())
-
 console.log(T.autoSugestion('kir'))
 
